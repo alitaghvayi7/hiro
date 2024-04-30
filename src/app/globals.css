@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer utilities {
+
+    .poppins-thin {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .poppins-extralight {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    .poppins-light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .poppins-extrabold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    .poppins-black {
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .poppins-thin-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    .poppins-extralight-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .poppins-light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .poppins-regular-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .poppins-medium-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .poppins-semibold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .poppins-bold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .poppins-extrabold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    .poppins-black-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    .taviraj-thin {
+        font-family: "Taviraj", serif;
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    .taviraj-extralight {
+        font-family: "Taviraj", serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    .taviraj-light {
+        font-family: "Taviraj", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .taviraj-regular {
+        font-family: "Taviraj", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .taviraj-medium {
+        font-family: "Taviraj", serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .taviraj-semibold {
+        font-family: "Taviraj", serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .taviraj-bold {
+        font-family: "Taviraj", serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .taviraj-extrabold {
+        font-family: "Taviraj", serif;
+        font-weight: 800;
+        font-style: normal;
+    }
+
+    .taviraj-black {
+        font-family: "Taviraj", serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    .taviraj-thin-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 100;
+        font-style: italic;
+    }
+
+    .taviraj-extralight-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    .taviraj-light-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .taviraj-regular-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .taviraj-medium-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .taviraj-semibold-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .taviraj-bold-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    .taviraj-extrabold-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 800;
+        font-style: italic;
+    }
+
+    .taviraj-black-italic {
+        font-family: "Taviraj", serif;
+        font-weight: 900;
+        font-style: italic;
+    }
+}
+
+.introduction-scroller {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.introduction-scroller section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.rotate-animation div.rotate-animation {
+    will-change: transform;
+    animation: rotation 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation div.rotate-animation-one {
+    will-change: transform;
+    animation: moving-one 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation div.rotate-animation-two {
+    will-change: transform;
+    animation: moving-two 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.button-animation {
+    will-change: transform;
+    animation: button-animation 3000ms ease-in-out 1ms infinite alternate;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(80deg);
+    }
+}
+
+@keyframes moving-one {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-60px, -200%);
+    }
+}
+
+@keyframes moving-two {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-320%, 55px);
+    }
+}
+
+@keyframes button-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+
+
+/* step 2 */
+
+.translate-animation {
+    will-change: transform;
+    animation: translate-to-left 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.translate-animation>div.translate-animation {
+    will-change: transform;
+    animation: scalex 5000ms ease-in-out 1ms infinite alternate;
+}
+
+@keyframes translate-to-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scalex {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(.5);
+    }
+}
+
+
+/* step 3 */
+
+.triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.rotate-animation-triangles img.rotate-animation {
+    will-change: transform;
+    animation: rotate-animation-triangles 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation-triangles div.rotate-animation-one {
+    will-change: transform;
+    animation: translate-triangles-one 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation-triangles div.rotate-animation-two {
+    will-change: transform;
+    animation: translate-triangles-two 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation-triangles div.rotate-animation-three {
+    will-change: transform;
+    animation: translate-triangles-three 5000ms ease-in-out 1ms infinite alternate;
+}
+
+@keyframes rotate-animation-triangles {
+    0% {
+        transform: scale(1.25) rotate(0);
+    }
+
+    100% {
+        transform: scale(1.25) rotate(-120deg);
+    }
+}
+
+@keyframes translate-triangles-one {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(90deg) translate(10px, -160px);
+    }
+}
+
+@keyframes translate-triangles-two {
+    0% {
+        transform: rotate(-22deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-22deg) translate(0px, -120px)
+    }
+}
+
+@keyframes translate-triangles-three {
+    0% {
+        transform: rotate(-155deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-155deg) translate(0px, -60px)
+    }
+}
+
+
+/* step 4 */
+
+.donate {
+    -webkit-mask-image: url("../assets/images/introduction/Subtract.svg");
+    mask-image: url("../assets/images/introduction/Subtract.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
