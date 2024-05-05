@@ -22,7 +22,7 @@ export default function Home(): React.ReactNode {
 
         <Fragment>
             <section className="w-screen h-screen overflow-hidden bg-gradient-to-b from-[#024343] to-[#001212] ">
-        <span className={`block w-[calc(100%-3rem)] h-[3px] bg-white bg-opacity-20 fixed isolate top-6 left-6 right-6`}>
+        <span className={`block w-[calc(100%-3rem)] h-[3px] overflow-hidden bg-white bg-opacity-20 fixed isolate top-6 left-6 right-6`}>
           <span
               style={{
                   boxShadow: `0px 0px 8px 0px #F5C61AB2`,
@@ -348,7 +348,7 @@ export default function Home(): React.ReactNode {
                     {/* start section seven */}
                     <motion.section
                         initial={{opacity: 0}}
-                        animate={{opacity: step === 7 ? 1 : 0}}
+                        animate={{opacity: step === 7 && 1}}
                         transition={{duration: 1, ease: "easeInOut"}}
                         className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center items-center gap-4`}>
                         <Image
