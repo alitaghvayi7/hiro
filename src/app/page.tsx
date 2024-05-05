@@ -26,7 +26,7 @@ export default function Home(): React.ReactNode {
           <span
               style={{
                   boxShadow: `0px 0px 8px 0px #F5C61AB2`,
-                  width: `${step === 1 ? Math.floor(100 / 7) : Math.floor(100 / 7) * step}%`
+                  width: `${step === 1 ? Math.floor(100 / 7) : (Math.floor(100 / 7) * step) + 2}%`
               }}
               className={`block h-full bg-gradient-to-r from-[#F5C61A] to-[#F47C20] transition-all`}></span>
         </span>
@@ -64,10 +64,13 @@ export default function Home(): React.ReactNode {
                             const element = event.target;
                             const x = Math.round(element.scrollHeight / window.innerHeight);
                             const y = Math.round((element.scrollTop + window.innerHeight) / window.innerHeight);
+
+                            // alert(y)
+                            console.log(y)
                             setStep(y)
                         }
                     }}
-                    className={`introduction-scroller no-scrollbar`}
+                    className={`introduction-scroller no-scrollbar relative`}
                 >
 
                     {/* Start First Step */}
@@ -75,7 +78,7 @@ export default function Home(): React.ReactNode {
                         initial={{opacity: 1}}
                         animate={{opacity: step === 1 ? 1 : 0}}
                         transition={{duration: 1, ease: "easeInOut"}}
-                        className={`w-full relative isolate overflow-hidden p-6 bg-transparent`}>
+                        className={`w-full isolate overflow-hidden p-6 bg-transparent relative`}>
                         <div className={`w-full relative isolate flex justify-between`}>
                             <span
                                 className={`poppins-extralight text-[90px] text-[#FFFFFF33] relative top-[7%] left-[6%] pt-4`}>01</span>
@@ -120,7 +123,7 @@ export default function Home(): React.ReactNode {
                         initial={{opacity: 1}}
                         animate={{opacity: step === 2 ? 1 : 0}}
                         transition={{duration: 1, ease: "easeInOut"}}
-                        className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col`}>
+                        className={`w-full isolate overflow-hidden p-6 bg-transparent flex flex-col relative`}>
                         <div className={`relative isolate w-[368px] h-[210px] top-8 translate-animation mt-4`}>
                             <Image
                                 src={ImageTwo}
