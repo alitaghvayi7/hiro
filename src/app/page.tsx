@@ -349,7 +349,7 @@ export default function Home(): React.ReactNode {
                     {/* start section seven */}
                     <motion.section
                         initial={{opacity: 0}}
-                        animate={{opacity: step === 7 && 1}}
+                        animate={{opacity: step === 7 ? 1 : 0}}
                         transition={{duration: 1, ease: "easeInOut"}}
                         className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center items-center gap-4`}>
                         <Image
