@@ -7,10 +7,10 @@ import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const APP_NAME = "PWA App";
-const APP_DEFAULT_TITLE = "My Awesome PWA App";
-const APP_TITLE_TEMPLATE = "%s - PWA App";
-const APP_DESCRIPTION = "Best PWA app in the world!";
+const APP_NAME = "Hiroo";
+const APP_DEFAULT_TITLE = "Hiroo";
+const APP_TITLE_TEMPLATE = "%s - Hiroo";
+const APP_DESCRIPTION = "Hiroo app in the world!";
 
 export const metadata: Metadata = {
   applicationName: APP_NAME,
@@ -72,7 +72,9 @@ export default function RootLayout({
           template='<div class="bar" role="bar"><div class="peg"></div></div> 
   <div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
         />
-        {children}
+        <TransitionProvider>
+          {children}
+        </TransitionProvider>
       </body>
     </html>
   );
