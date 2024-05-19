@@ -11,6 +11,19 @@ import Image from "next/image";
 import { ArrowDownIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { Fragment, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Taviraj, Poppins } from 'next/font/google'
+
+export const taviraj = Taviraj({
+    weight: ['100', '200', '300', '400', '500', '600'],
+    preload: true,
+    subsets: ['latin'],
+    style: ['italic', 'normal'],
+})
+export const poppins = Poppins({
+    weight: ['100', '200', '300', '400', '500', '600'],
+    preload: true,
+    subsets: ['latin']
+})
 
 export default function Home(): React.ReactNode {
 
@@ -39,11 +52,11 @@ export default function Home(): React.ReactNode {
                 {/* Bottom menu */}
                 <div
                     className={` w-[calc(100%-3rem)] fixed bottom-6 left-6 right-6 flex items-center justify-between z-[10]`}>
-                    <span className="text-white poppins-medium text-[16px] cursor-pointer">
+                    <span className={`text-white ${poppins.className} font-medium leading-6 text-[16px] cursor-pointer`}>
                         EN  /  FA
                     </span>
                     <div className={`flex items-center gap-2`}>
-                        <span className="text-white poppins-light text-[16px] cursor-pointer">
+                        <span className={`text-white ${poppins.className} font-light leading-6 text-[16px] cursor-pointer`}>
                             {step === 1 ? 'Scroll to discover' : ''}
                         </span>
                         <button
@@ -89,7 +102,7 @@ export default function Home(): React.ReactNode {
                         className={`w-full isolate overflow-hidden p-6 bg-transparent relative flex flex-col justify-center`}>
                         <div className={`w-full relative isolate flex justify-between`}>
                             <span
-                                className={`poppins-extralight text-[90px] text-[#FFFFFF33] relative top-[7%] left-[6%] pt-4`}>01</span>
+                                className={`${poppins.className} font-thin text-[90px] text-[#FFFFFF33] relative top-[7%] left-[6%] pt-4`}>01</span>
                             <div className={`relative isolate w-[376px] h-[361px] pt-4 rotate-animation`}>
                                 <div
                                     className={` absolute top-0 right-[-88px] w-[298px] h-[292px] z-[-1] isolate flex items-center justify-center rotate-animation`}>
@@ -110,16 +123,16 @@ export default function Home(): React.ReactNode {
                             </div>
                         </div>
                         <div className={`relative top-[-15%]`}>
-                            <h1 className={`taviraj-medium text-[50px] text-white max-w-[267px] leading-[3rem] drop-shadow-[0_4px_4px_#00000040]`}>
+                            <h1 className={`${taviraj.className} font-normal text-[50px] text-white max-w-[267px] leading-[3.5rem] drop-shadow-[0_4px_4px_#00000040]`}>
                                 Advertise
-                                <p className={`taviraj-medium-italic text-[#ffe9a6]`}>Creatively</p>
+                                <p className={`${taviraj.className} font-medium italic text-[#ffe9a6]`}>Creatively</p>
                                 & beyond
                             </h1>
-                            <p className={`poppins-light text-[#ffe9a6] text-[16px] leading-6 max-w-[220px] mt-4 drop-shadow-[0_4px_4px_#00000040]`}>
+                            <p className={`text-[#ffe9a6] text-[16px] leading-6 max-w-[220px] mt-6 drop-shadow-[0_4px_4px_#00000040] ${poppins.className} font-light `}>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
                             <button
-                                className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
+                                className={`w-[126px] h-10 mt-4 text-white rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center ${poppins.className}`}>
                                 More...
                             </button>
                         </div>
@@ -149,20 +162,20 @@ export default function Home(): React.ReactNode {
                         </div>
 
                         <span
-                            className={`poppins-extralight text-[90px] text-[#FFFFFF33] self-end relative top-0`}>02</span>
+                            className={`${poppins.className} font-thin text-[90px] text-[#FFFFFF33] self-end relative top-0`}>02</span>
 
                         <div className={`relative top-[-6%]`}>
-                            <h1 className={`taviraj-medium text-[50px] text-white max-w-[267px] leading-[3rem]`}>
+                            <h1 className={`${taviraj.className} font-normal text-[50px] text-white max-w-[267px] leading-[3rem]`}>
                                 What do
                                 <br />
-                                <span className={`taviraj-medium-italic text-[#ffe9a6]`}>People </span>
+                                <span className={`${taviraj.className} font-medium italic text-[#ffe9a6]`}>People </span>
                                 say about you?
                             </h1>
-                            <p className={`poppins-light text-[#ffe9a6] text-[16px] leading-6 w-full mt-4`}>
+                            <p className={`${poppins.className} text-[#ffe9a6] text-[16px] leading-6 w-full mt-4`}>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
                             <button
-                                className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
+                                className={`w-[126px] h-10 mt-4 text-white ${poppins.className} font-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
                                 More...
                             </button>
                         </div>
@@ -178,20 +191,20 @@ export default function Home(): React.ReactNode {
                         className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center`}>
 
                         <span
-                            className={`poppins-extralight text-[90px] text-[#FFFFFF33] self-end relative top-0 pt-4`}>03</span>
+                            className={`${poppins.className} font-thin text-[90px] text-[#FFFFFF33] self-end relative top-0 pt-4`}>03</span>
 
                         <div dir="rtl" className={`w-full relative top-0 self-end`}>
-                            <h1 className={`taviraj-medium text-[50px] text-white max-w-[297px] leading-[3rem]`}>
+                            <h1 className={`${taviraj.className} font-normal text-[50px] text-white max-w-[297px] leading-[3rem]`}>
                                 Become the
                                 <br />
-                                <span className={`taviraj-medium-italic text-[#ffe9a6]`}>King </span>
+                                <span className={`${taviraj.className} text-[#ffe9a6]`}>King </span>
                                 of your market
                             </h1>
-                            <p className={`poppins-light text-[#ffe9a6] text-[16px] leading-6 w-full max-w-[259px] mt-4`}>
+                            <p className={`${poppins.className} text-[#ffe9a6] text-[16px] leading-6 w-full max-w-[259px] mt-4`}>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
                             <button dir="ltr"
-                                className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
+                                className={`w-[126px] h-10 mt-4 text-white ${poppins.className} rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
                                 More...
                             </button>
                         </div>
@@ -223,20 +236,20 @@ export default function Home(): React.ReactNode {
                         transition={{ duration: 1, ease: "easeInOut" }}
                         className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center`}>
 
-                        <span className={`poppins-extralight text-[90px] text-[#FFFFFF33] relative pt-4`}>04</span>
+                        <span className={`${poppins.className} font-thin text-[90px] text-[#FFFFFF33] relative pt-4`}>04</span>
 
                         <div className={`w-full relative top-0`}>
-                            <h1 className={`taviraj-medium text-[50px] text-white leading-[3rem]`}>
+                            <h1 className={`${taviraj.className} font-normal text-[50px] text-white leading-[3rem]`}>
                                 Evolve
                                 <br />
                                 your
-                                <span className={`taviraj-medium-italic text-[#ffe9a6]`}>Sales</span>
+                                <span className={`${taviraj.className} italic text-[#ffe9a6]`}> Sales</span>
                             </h1>
-                            <p className={`poppins-light text-[#ffe9a6] text-[16px] leading-6 w-full max-w-[302px] mt-4`}>
+                            <p className={`${poppins.className} text-[#ffe9a6] text-[16px] leading-6 w-full max-w-[302px] mt-4`}>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
                             <button
-                                className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
+                                className={`w-[126px] h-10 mt-4 text-white ${poppins.className} rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
                                 More...
                             </button>
                         </div>
@@ -271,7 +284,7 @@ export default function Home(): React.ReactNode {
                         transition={{ duration: 1, ease: "easeInOut" }}
                         className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center`}>
                         <div className={`w-full relative isolate flex justify-between pt-4`}>
-                            <span className={`poppins-extralight text-[90px] text-[#FFFFFF33] relative`}>05</span>
+                            <span className={`${poppins.className} font-thin text-[90px] text-[#FFFFFF33] relative`}>05</span>
                             <div className={`relative isolate w-[315px] h-[290px] button-animation`}>
                                 <div
                                     className={` absolute top-[30px] right-[-60px] w-[315px] h-[290px] z-[-1] isolate flex items-center justify-center rotate-animation`}>
@@ -292,18 +305,18 @@ export default function Home(): React.ReactNode {
                             </div>
                         </div>
                         <div className={`relative top-0 self-end flex flex-col items-end`}>
-                            <h1 className={`taviraj-medium text-[50px] text-white leading-[3rem] max-w-[330px] text-end`}>
+                            <h1 className={`${taviraj.className} font-normal text-[50px] text-white leading-[3rem] max-w-[330px] text-end`}>
                                 Become more
                                 <br />
-                                <span className={`taviraj-medium-italic text-[#ffe9a6]`}>Coherent </span>
+                                <span className={`${taviraj.className}-italic text-[#ffe9a6]`}>Coherent </span>
                                 and
-                                <span className={`taviraj-medium-italic text-[#ffe9a6]`}> Structured</span>
+                                <span className={`${taviraj.className} italic text-[#ffe9a6]`}> Structured</span>
                             </h1>
-                            <p className={`poppins-light text-[#ffe9a6] text-[16px] leading-6 text-end max-w-[290px] mt-4`}>
+                            <p className={`${poppins.className} text-[#ffe9a6] text-[16px] leading-6 text-end max-w-[290px] mt-4`}>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
                             <button
-                                className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
+                                className={`w-[126px] h-10 mt-4 text-white ${poppins.className} rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
                                 More...
                             </button>
                         </div>
@@ -334,19 +347,19 @@ export default function Home(): React.ReactNode {
                                 <div
                                     className={`w-[60px] h-[60px] pyramid bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[75px] right-[15px] rotate-[-10deg] z-[1] backdrop-blur-[1px] translate-animation-two`}></div>
                             </div>
-                            <span className={`poppins-extralight text-[90px] text-[#FFFFFF33] relative`}>06</span>
+                            <span className={`${poppins.className} font-thin text-[90px] text-[#FFFFFF33] relative`}>06</span>
                         </div>
                         <div className={`relative top-[-8%] flex flex-col`}>
-                            <h1 className={`taviraj-medium text-[50px] text-white leading-[3rem]`}>
+                            <h1 className={`${taviraj.className} font-normal text-[50px] text-white leading-[3rem]`}>
                                 Don't be
-                                <span className={`taviraj-medium-italic text-[#ffe9a6]`}>Left behind </span>
+                                <span className={`${taviraj.className} italic text-[#ffe9a6]`}>Left behind </span>
                                 in the Startup field of your industry!
                             </h1>
-                            <p className={`poppins-light text-[#ffe9a6] text-[16px] leading-6 max-w-[290px] mt-4`}>
+                            <p className={`${poppins.className} text-[#ffe9a6] text-[16px] leading-6 max-w-[290px] mt-4`}>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             </p>
                             <button
-                                className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
+                                className={`w-[126px] h-10 mt-4 text-white ${poppins.className} rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
                                 More...
                             </button>
                         </div>
@@ -365,14 +378,16 @@ export default function Home(): React.ReactNode {
                             alt=""
                             className="object-cover w-[192px] h-[282px]"
                         />
-                        <h1 className={`taviraj-medium-italic text-[50px] text-[#ffe9a6] leading-[3rem] text-center`}>
+
+                        <h1 className={`${taviraj.className} font-medium italic text-[38px] text-[#ffe9a6] leading-[120%] text-center`}>
                             Congratulation!
                         </h1>
-                        <p className={`taviraj-regular text-[28px] text-white leading-[30px] max-w-[326px] text-center`}>
+
+                        <p className={`${taviraj.className} font-normal text-[28px] text-white leading-[110%] max-w-[326px] text-center`}>
                             From now on, you will have a dynamic and creative thinking room...
                         </p>
                         <button
-                            className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
+                            className={`w-[192px] h-10 mt-4 text-white ${poppins.className} rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
                             More...
                         </button>
                     </motion.section>
