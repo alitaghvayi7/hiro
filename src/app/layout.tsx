@@ -66,11 +66,9 @@ export default function RootLayout({
       </Head> */}
       <body className={inter.className}>
         <NextTopLoader
-          color={"#FFFFFF"}
+          color={"#FFE9A6"}
           showSpinner={false}
           height={1}
-          template='<div class="bar" role="bar"><div class="peg"></div></div> 
-  <div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
         />
         <TransitionProvider>
           {children}
