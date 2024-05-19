@@ -7,10 +7,13 @@ import ImageFour from "@/assets/images/introduction/forth_step_image.png"
 import ImageFive from "@/assets/images/introduction/step_five_image.png"
 import ImageSix from "@/assets/images/introduction/step_six_image.png"
 import ImageSeven from "@/assets/images/introduction/final_step.png"
+import TriangleLeft from "@/assets/images/introduction/trinagle-left.png"
+import TriangleRight from "@/assets/images/introduction/triangle-right.png"
 import Image from "next/image";
 import { ArrowDownIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { Fragment, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home(): React.ReactNode {
 
@@ -56,7 +59,7 @@ export default function Home(): React.ReactNode {
                                     setStep(next);
                                 }
                             }}
-                            className={`w-8 h-8 rounded-[8px] border border-white flex items-center justify-center button-animation`}>
+                            className={`w-8 h-8 rounded-[8px] border border-white flex items-center justify-center`}>
                             <ArrowDownIcon className="w-4 h-4 text-white" />
                         </button>
                     </div>
@@ -272,23 +275,21 @@ export default function Home(): React.ReactNode {
                         className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center`}>
                         <div className={`w-full relative isolate flex justify-between pt-4`}>
                             <span className={`poppins-extralight text-[90px] text-[#FFFFFF33] relative`}>05</span>
-                            <div className={`relative isolate w-[315px] h-[290px] button-animation`}>
+                            <div className={`relative isolate w-[315px] h-[290px] translate-animation-chain`}>
                                 <div
-                                    className={` absolute top-[30px] right-[-60px] w-[315px] h-[290px] z-[-1] isolate flex items-center justify-center rotate-animation`}>
+                                    className={` absolute top-[30px] right-[-60px] w-[315px] h-[290px] z-[-1] isolate flex items-center justify-center `}>
                                     <Image
                                         src={ImageFive}
                                         alt=""
-                                        className="object-cover w-full h-full absolute inset-0 z-[-1]"
+                                        className="object-cover w-full h-full absolute inset-0 z-[-1] rotate-animation"
                                     />
-
-
                                 </div>
                                 <div
-                                    className={`w-[53px] h-[53px] rounded-[12px] bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute top-0 right-[70px] z-[1] backdrop-blur-[1px]`}></div>
+                                    className={`w-[53px] h-[53px] rounded-[12px] bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute top-[20px] right-[10px] z-[-2] rotate-[35deg] backdrop-blur-[1px]  rotate-animation-one`}></div>
                                 <div
-                                    className={`w-[56px] h-[56px] rounded-[12px] bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[125px] left-[12%] z-[1] backdrop-blur-[1px] rotate-animation-one`}></div>
+                                    className={`w-[56px] h-[56px] rounded-[12px] bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[5px] left-[-40px] z-[-2] backdrop-blur-[1px] rotate-animation-two`}></div>
                                 <div
-                                    className={`w-[60px] h-[60px] rounded-[12px] bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[75px] right-[-15px] z-[1] backdrop-blur-[1px] rotate-animation-two`}></div>
+                                    className={`w-[60px] h-[60px] rounded-[12px] bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[20px] right-[35px] rotate-[-40deg] z-[1] backdrop-blur-[1px] rotate-animation-three`}></div>
                             </div>
                         </div>
                         <div className={`relative top-0 self-end flex flex-col items-end`}>
@@ -330,9 +331,13 @@ export default function Home(): React.ReactNode {
                                 <div
                                     className={`w-[53px] h-[53px] pyramid bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[-10%] left-[40%] rotate-[180deg] z-[1] backdrop-blur-[1px] translate-animation-three`}></div>
                                 <div
-                                    className={`w-[56px] h-[56px] pyramid bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[125px] left-[5%] rotate-[40deg] z-[1] backdrop-blur-[1px] translate-animation-one`}></div>
+                                    className={`w-[56px] h-[56px] absolute bottom-[125px] left-[5%] rotate-[40deg] z-[-2] backdrop-blur-[1px] translate-animation-one`}>
+                                    <Image src={TriangleLeft} className="w-full h-full object-cover" alt="" />
+                                </div>
                                 <div
-                                    className={`w-[60px] h-[60px] pyramid bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[75px] right-[15px] rotate-[-10deg] z-[1] backdrop-blur-[1px] translate-animation-two`}></div>
+                                    className={`w-[70px] h-[65px] absolute bottom-[75px] right-[15px] rotate-[-10deg] z-[1] backdrop-blur-[1px] translate-animation-two`}>
+                                    <Image src={TriangleRight} className="w-full h-full object-cover" alt="" />
+                                </div>
                             </div>
                             <span className={`poppins-extralight text-[90px] text-[#FFFFFF33] relative`}>06</span>
                         </div>
@@ -371,10 +376,11 @@ export default function Home(): React.ReactNode {
                         <p className={`taviraj-regular text-[28px] text-white leading-[30px] max-w-[326px] text-center`}>
                             From now on, you will have a dynamic and creative thinking room...
                         </p>
-                        <button
+                        <Link
+                            href={'/aboutus'}
                             className={`w-[126px] h-10 mt-4 text-white poppins-light rounded-[8px] border border-[#FFFFFF33] flex items-center justify-center`}>
                             More...
-                        </button>
+                        </Link>
                     </motion.section>
                     {/* end section seven */}
 
