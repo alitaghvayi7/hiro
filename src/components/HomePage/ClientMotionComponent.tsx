@@ -9,7 +9,7 @@ interface Props{
     value:number,
 }
 
-const ClientMotionComponent = (props) =>{
+const ClientMotionComponent = (props:Props) =>{
     const {
         step,
         className,
