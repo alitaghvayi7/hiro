@@ -1,11 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import {Inter, Poppins, Taviraj} from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import TransitionProvider from "@/components/providers/TransitionProvider";
-import Head from "next/head";
+import {cn} from "@/lib/utils/cn";
 
-const inter = Inter({ subsets: ["latin"] });
+export const taviraj = Taviraj({
+  weight: ['100', '200', '300', '400', '500', '600'],
+  preload: true,
+  subsets: ['latin'],
+  style: ['italic', 'normal'],
+  variable:'--font-taviraj'
+});
+
+export const poppins = Poppins({
+  weight: ['100', '200', '300', '400', '500', '600'],
+  preload: true,
+  subsets: ['latin'],
+      variable:'--font-poppins'
+});
 
 const APP_NAME = "Hiroo";
 const APP_DEFAULT_TITLE = "Hiroo";
@@ -59,12 +72,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <Head key={'home'}>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-      </Head> */}
-      <body className={inter.className}>
+      <body className={cn("",taviraj.variable,poppins.variable)}>
         <NextTopLoader
           color={"#FFE9A6"}
           showSpinner={false}

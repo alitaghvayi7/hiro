@@ -1,0 +1,31 @@
+/* step 2 */
+
+.translate-animation {
+    will-change: transform;
+    animation: translate-to-left 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.translate-animation>div.translate-animation {
+    will-change: transform;
+    animation: scalex 5000ms ease-in-out 1ms infinite alternate;
+}
+
+@keyframes translate-to-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scalex {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(.5);
+    }
+}

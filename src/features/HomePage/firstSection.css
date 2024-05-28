@@ -1,0 +1,59 @@
+.rotate-animation div.rotate-animation {
+    will-change: transform;
+    animation: rotation 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation div.rotate-animation-one {
+    will-change: transform;
+    animation: moving-one 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation div.rotate-animation-two {
+    will-change: transform;
+    animation: moving-two 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.button-animation {
+    will-change: transform;
+    animation: button-animation 3000ms ease-in-out 1ms infinite alternate;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(80deg);
+    }
+}
+
+@keyframes moving-one {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-60px, -200%);
+    }
+}
+
+@keyframes moving-two {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(-320%, 55px);
+    }
+}
+
+@keyframes button-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
