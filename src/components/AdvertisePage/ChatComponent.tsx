@@ -49,8 +49,22 @@ export const options = {
     },
     plugins: {
         legend: {
-            position: 'bottom' as const,
-            display: false
+            position: 'bottom',
+            display: true,
+            labels: {
+                font: {
+                    size: 12,
+                    family: 'var(--font-taviraj)',
+                    style: 'italic',
+                    weight: 'bold',
+                },
+                color: '#FFFFFF33',
+                padding: 20,
+                boxWidth: 20,
+                boxHeight: 10,
+                usePointStyle: true, // For circular legend boxes
+                // pointStyle: 'circle' // Shape of the legend box
+            }
         },
         title: {
             display: false,
@@ -66,6 +80,11 @@ export const options = {
                 grid: {
                     color: '#FFFFFF33', // Custom color for y-axis grid lines
                 },
+                min: -100,
+                max: 100,
+                ticks: {
+                    stepSize: 20
+                }
             },
         },
     },
@@ -78,19 +97,19 @@ export const data = {
     labels,
     datasets: [
         {
-            label: 'Dataset 1',
+            label: 'Product 1',
             data: randoms,
             borderColor: 'rgb(255,255,255)',
             backgroundColor: 'rgba(255,255,255,1)',
         },
         {
-            label: 'Dataset 2',
+            label: 'Product 2',
             data: randoms.map((i) => i * 2),
             borderColor: '#F47C20',
             backgroundColor: '#F47C20',
         },
         {
-            label: 'Dataset 3',
+            label: 'Product 3',
             data: randoms.map((i) => i * 3),
             borderColor: '#FFE9A6',
             backgroundColor: '#FFE9A6',

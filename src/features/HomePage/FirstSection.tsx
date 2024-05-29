@@ -2,7 +2,9 @@ import Image from "next/image";
 import ImageOne from "@/assets/images/introduction/first_step_image.png";
 import dynamic from "next/dynamic";
 import "./firstSection.css";
-import {Button} from "@/components/ui/button";
+import {Button, buttonVariants} from "@/components/ui/button";
+import Link from "next/link";
+import {cn} from "@/lib/utils/cn";
 const ClientMotionComponent  = dynamic( ()=>import("@/components/HomePage/ClientMotionComponent"),{ssr:false});
 
 interface Props {
@@ -50,11 +52,12 @@ const FirstSection = (props:Props) => {
                     <p className={`text-[#ffe9a6] text-[16px] leading-6 max-w-[220px] mt-6 drop-shadow-[0_4px_4px_#00000040] font-poppins font-light `}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </p>
-                    <Button
-                        variant={'outline'}
-                        className={`w-[126px] h-10 mt-4 text-white rounded-[8px] font-poppins`}>
+                    <Link
+                        href={'/advertise'}
+                        className={cn(buttonVariants({ variant: "outline" }),'w-[126px] h-10 mt-4 text-white rounded-[8px] font-poppins')}
+                    >
                         More...
-                    </Button>
+                    </Link>
                 </div>
             </ClientMotionComponent>
         </>

@@ -1,20 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import {Inter, Poppins, Taviraj} from "next/font/google";
+import { Poppins, Taviraj,Roboto} from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import TransitionProvider from "@/components/providers/TransitionProvider";
 import {cn} from "@/lib/utils/cn";
 
 export const taviraj = Taviraj({
-  weight: ['100', '200', '300', '400', '500', '600'],
+  weight: ['100', '200', '300', '400', '500', '600','700','800','900'],
   preload: true,
   subsets: ['latin'],
   style: ['italic', 'normal'],
   variable:'--font-taviraj'
 });
 
+export const roboto = Roboto({
+  weight: ['100', '300', '400', '500','700','900'],
+  preload: true,
+  subsets: ['latin'],
+  style: ['italic', 'normal'],
+  variable:'--font-roboto'
+});
+
 export const poppins = Poppins({
-  weight: ['100', '200', '300', '400', '500', '600'],
+  weight: ['100', '200', '300', '400', '500', '600','700','800','900'],
   preload: true,
   subsets: ['latin'],
       variable:'--font-poppins'
@@ -72,7 +80,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("",taviraj.variable,poppins.variable)}>
+      <body className={cn("bg-gradient-to-b from-[#024343] to-[#001212]",taviraj.variable,poppins.variable,roboto.variable)}>
         <NextTopLoader
           color={"#FFE9A6"}
           showSpinner={false}

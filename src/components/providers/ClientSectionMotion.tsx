@@ -4,11 +4,11 @@ import {motion} from "framer-motion"
 import {cn} from "@/lib/utils/cn";
 
 interface Props {
-    children: React.ReactNode,
-    className: '',
+    children?: React.ReactNode,
+    className?: '',
 }
 
-const ClientMotionComponent = (props: Props) => {
+const ClientSectionMotion = (props: Props) => {
 
     const {
         className,
@@ -25,3 +25,5 @@ const ClientMotionComponent = (props: Props) => {
         </motion.section>
     )
 }
+
+export default ClientSectionMotion

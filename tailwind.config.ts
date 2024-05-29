@@ -107,7 +107,8 @@ const config = {
       },
       fontFamily:{
         taviraj : ["var(--font-taviraj)"],
-        poppins : ["var(--font-poppins)"]
+        poppins : ["var(--font-poppins)"],
+        roboto : ["var(--font-roboto)"],
       }
     },
   },
