@@ -5,7 +5,7 @@ import {cn} from "@/lib/utils/cn";
 
 interface Props {
     children?: React.ReactNode,
-    className?: '',
+    className?: string,
 }
 
 const ClientSectionMotion = (props: Props) => {

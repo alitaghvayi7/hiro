@@ -5,7 +5,7 @@ import NextTopLoader from "nextjs-toploader";
 import TransitionProvider from "@/components/providers/TransitionProvider";
 import {cn} from "@/lib/utils/cn";
 
-export const taviraj = Taviraj({
+const taviraj = Taviraj({
   weight: ['100', '200', '300', '400', '500', '600','700','800','900'],
   preload: true,
   subsets: ['latin'],
@@ -13,7 +13,7 @@ export const taviraj = Taviraj({
   variable:'--font-taviraj'
 });
 
-export const roboto = Roboto({
+const roboto = Roboto({
   weight: ['100', '300', '400', '500','700','900'],
   preload: true,
   subsets: ['latin'],
@@ -21,7 +21,7 @@ export const roboto = Roboto({
   variable:'--font-roboto'
 });
 
-export const poppins = Poppins({
+const poppins = Poppins({
   weight: ['100', '200', '300', '400', '500', '600','700','800','900'],
   preload: true,
   subsets: ['latin'],

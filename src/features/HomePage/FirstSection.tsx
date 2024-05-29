@@ -2,7 +2,7 @@ import Image from "next/image";
 import ImageOne from "@/assets/images/introduction/first_step_image.png";
 import dynamic from "next/dynamic";
 import "./firstSection.css";
-import {Button, buttonVariants} from "@/components/ui/button";
+import { buttonVariants} from "@/components/ui/button";
 import Link from "next/link";
 import {cn} from "@/lib/utils/cn";
 const ClientMotionComponent  = dynamic( ()=>import("@/components/HomePage/ClientMotionComponent"),{ssr:false});

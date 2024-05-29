@@ -2,7 +2,6 @@
 
 import { AnimatePresence,motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { Fragment } from "react";
 
 const TransitionProvider = ({ children }: { children?: React.ReactNode }) => {
     const pathName = usePathname();

@@ -19,6 +19,7 @@ export default function Home(): React.ReactNode {
     const container = useRef<HTMLElement | null>(null);
 
     // @ts-ignore
+    // @ts-ignore
     return (
 
         <Fragment>
@@ -28,14 +29,14 @@ export default function Home(): React.ReactNode {
                 {/* progress bar */}
 
                 {/* Bottom menu */}
-                <BottomBar container={container} setStep={setStep} step={step}/>
+                <BottomBar container={container!} setStep={setStep} step={step}/>
                 {/* bottom menu */}
 
                 <section
                     ref={container}
                     onScroll={(event: React.UIEvent<HTMLElement>) => {
 
-                        const element = event.target;
+                        const element = event.currentTarget as HTMLElement;
                         const x = Math.round(element.scrollHeight / window.innerHeight);
                         const y = Math.floor((element.scrollTop + window.innerHeight) / window.innerHeight);
 

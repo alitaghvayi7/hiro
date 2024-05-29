@@ -4,7 +4,6 @@ import VideoImage from "@/assets/images/advertise/Frame12.png";
 import {Separator} from "@/components/ui/seprator";
 import ChartComponent from "@/components/AdvertisePage/ChatComponent";
 import MobileFooter from "@/components/common/MobileFooter";
-import ClientSectionMotion from "@/components/providers/ClientSectionMotion";
 import Link from "next/link";
 import {cn} from "@/lib/utils/cn";
 import {buttonVariants} from "@/components/ui/button";

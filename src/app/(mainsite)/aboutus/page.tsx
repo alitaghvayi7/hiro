@@ -2,13 +2,6 @@ import { HomeIcon } from "@heroicons/react/24/solid"
 import MapImage from "@/assets/images/introduction/mp-image.png"
 import Image from "next/image"
 import Link from "next/link"
-import { Taviraj, Poppins, } from 'next/font/google'
-
-export const poppins = Poppins({
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-    preload: true,
-    subsets: ['latin']
-})
 
 
 function aboutus() {
@@ -33,31 +26,31 @@ function aboutus() {
                 <Image alt='' src={MapImage} className={`w-full h-[326px] object-cover rounded-[16px]`} />
                 <div className="w-full about-us-table">
                     <div className="w-full flex items-center justify-between h-[56px] rounded-[8px] p-4" dir="ltr">
-                        <span className={`${poppins.className} text-[14px] text-[#FFFFFF33] font-[400]`}>office 1</span>
-                        <span className={`${poppins.className} text-[14px] text-white font-[400]`}>021-4789561</span>
+                        <span className={`font-poppins text-[14px] text-[#FFFFFF33] font-[400]`}>office 1</span>
+                        <span className={`font-poppins text-[14px] text-white font-[400]`}>021-4789561</span>
                     </div>
 
                     <div className="w-full flex items-center justify-between h-[56px] rounded-[8px] p-4" dir="ltr">
-                        <span className={`${poppins.className} text-[14px] text-[#FFFFFF33] font-[400]`}>Office 2</span>
-                        <span className={`${poppins.className} text-[14px] text-white font-[400]`}>025-9874561</span>
-                    </div>
-
-
-                    <div className="w-full flex items-center justify-between h-[56px] rounded-[8px] p-4" dir="ltr">
-                        <span className={`${poppins.className} text-[14px] text-[#FFFFFF33] font-[400]`}>Phone</span>
-                        <span className={`${poppins.className} text-[14px] text-white font-[400]`}>09100587498</span>
+                        <span className={`font-poppins text-[14px] text-[#FFFFFF33] font-[400]`}>Office 2</span>
+                        <span className={`font-poppins text-[14px] text-white font-[400]`}>025-9874561</span>
                     </div>
 
 
                     <div className="w-full flex items-center justify-between h-[56px] rounded-[8px] p-4" dir="ltr">
-                        <span className={`${poppins.className} text-[14px] text-[#FFFFFF33] font-[400]`}>Email</span>
-                        <span className={`${poppins.className} text-[14px] text-white font-[400]`}>example@gmail.com</span>
+                        <span className={`font-poppins text-[14px] text-[#FFFFFF33] font-[400]`}>Phone</span>
+                        <span className={`font-poppins text-[14px] text-white font-[400]`}>09100587498</span>
                     </div>
 
 
                     <div className="w-full flex items-center justify-between h-[56px] rounded-[8px] p-4" dir="ltr">
-                        <span className={`${poppins.className} text-[14px] text-[#FFFFFF33] font-[400]`}>Instagram</span>
-                        <span className={`${poppins.className} text-[14px] text-white font-[400]`}>@Iraneziba</span>
+                        <span className={`font-poppins text-[14px] text-[#FFFFFF33] font-[400]`}>Email</span>
+                        <span className={`font-poppins text-[14px] text-white font-[400]`}>example@gmail.com</span>
+                    </div>
+
+
+                    <div className="w-full flex items-center justify-between h-[56px] rounded-[8px] p-4" dir="ltr">
+                        <span className={`font-poppins text-[14px] text-[#FFFFFF33] font-[400]`}>Instagram</span>
+                        <span className={`font-poppins text-[14px] text-white font-[400]`}>@Iraneziba</span>
                     </div>
                 </div>
             </section>

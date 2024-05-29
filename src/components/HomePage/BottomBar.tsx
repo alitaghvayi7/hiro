@@ -1,11 +1,11 @@
 import {ArrowDownIcon} from "@heroicons/react/24/outline";
-import {Dispatch, SetStateAction} from "react";
+import {Dispatch, SetStateAction,RefObject} from "react";
 import {Button, buttonVariants} from "@/components/ui/button";
 
 interface Props {
     step : number,
     setStep : Dispatch<SetStateAction<number>>,
-    container: HTMLElement | null
+    container: RefObject<HTMLElement> | null
 }
 
 const BottomBar = (props:Props) =>{
