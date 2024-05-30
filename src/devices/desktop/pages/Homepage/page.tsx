@@ -4,8 +4,8 @@ import {Fragment, useRef, useState} from "react";
 import Image from "next/image";
 import FirstSection from "@/devices/desktop/features/HomePage/FirstSection";
 import SecondSection from "@/devices/desktop/features/HomePage/SecondSection";
-import ThirdSection from "@/devices/mobile/features/HomePage/ThirdSection";
-import ForthSection from "@/devices/mobile/features/HomePage/ForthSection";
+import ThirdSection from "@/devices/desktop/features/HomePage/ThirdSection";
+import ForthSection from "@/devices/desktop/features/HomePage/ForthSection";
 import FifthSection from "@/devices/mobile/features/HomePage/FifthSection";
 import SixthSection from "@/devices/mobile/features/HomePage/SixthSection";
 import SeventhSection from "@/devices/mobile/features/HomePage/SeventhSection";
@@ -16,7 +16,7 @@ import Logo from "@/assets/images/logo-lg.png"
 import Link from "next/link";
 import {cn} from "@/lib/utils/cn";
 import {Button, buttonVariants} from "@/components/ui/button";
-import {ArrowDownTrayIcon} from "@heroicons/react/24/outline";
+import {ArrowDownIcon, ArrowDownTrayIcon} from "@heroicons/react/24/outline";
 
 export default function HomePage(): React.ReactNode {
 
@@ -30,11 +30,12 @@ export default function HomePage(): React.ReactNode {
 
         <Fragment>
             <section
-                className="hidden lg:block px-8 2xl:px-0 w-screen max-w-[1490px] mx-auto h-screen overflow-hidden bg-gradient-to-b from-[#024343] to-[#001212] ">
+                className="hidden lg:block px-8 2xl:px-0 w-screen max-w-[1490px] mx-auto h-screen overflow-hidden bg-gradient-to-b from-[#024343] to-[#001212] relative isolate">
                 {/* progreass bar */}
                 {/*<ProgressBar step={step}/>*/}
                 {/* progress bar */}
-                <nav className={` w-full h-[60px] top-8 bg-transparent flex mt-8 items-center gap-[294px] justify-between`}>
+                <nav
+                    className={` w-full h-[60px] bg-transparent flex mt-8 items-center gap-[294px] justify-between relative z-[-10] isolate`}>
                     <div className={`flex items-center gap-[94px]`}>
                         <Image src={Logo} alt={''} className={`h-[60px] w-[40px] drop-shadow-sm object-cover`}/>
                         <menu className={`flex w-[424px] justify-around items-center`}>
@@ -81,6 +82,38 @@ export default function HomePage(): React.ReactNode {
                     </div>
                 </nav>
 
+                <div className={`flex items-center gap-2 absolute z-[20] left-[50%] bottom-8 translate-x-[-50%]`}>
+                        <span className={`text-white font-poppins font-light leading-6 text-[16px] cursor-pointer`}>
+                            Scroll to discover
+                        </span>
+                    <Button
+                        variant={'outline'}
+                        onClick={() => {
+                            if (step !== 7) {
+                                const next = step + 1;
+
+                                // @ts-ignore
+                                container.current.scrollTop = `${step * window.innerHeight}`
+                                setStep(next);
+                            }
+                        }}
+                        className={`w-8 h-8 rounded-[8px] flex items-center justify-center button-animation`}>
+                        <ArrowDownIcon className="w-5 h-5 text-white"/>
+                    </Button>
+                </div>
+
+                <div
+                    className={` w-[2px] h-full max-h-[326px] flex items-center justify-between absolute z-[20] isolate right-8 gap-3 top-[50%] translate-y-[-50%]`}>
+                    <span
+                        className={`w-full h-full overflow-hidden bg-white bg-opacity-20 `}>
+                        <span
+                            style={{
+                                boxShadow: `0px 0px 8px 0px #F5C61AB2`,
+                                height: `${step === 1 ? Math.floor(100 / 7) : (Math.floor(100 / 7) * step) + 2}%`
+                            }}
+                            className={`block h-full bg-gradient-to-r from-[#F5C61A] to-[#F47C20] transition-all`}></span>
+                    </span>
+                </div>
                 {/* Bottom menu */}
                 {/*<BottomBar container={container!} setStep={setStep} step={step}/>*/}
                 {/* bottom menu */}
@@ -109,11 +142,11 @@ export default function HomePage(): React.ReactNode {
                     {/* End Second Step */}
 
                     {/* start Third Step */}
-                    {/*<ThirdSection step={step}/>*/}
+                    <ThirdSection step={step}/>
                     {/* End Third Step */}
 
                     {/* start forth step */}
-                    {/*<ForthSection step={step}/>*/}
+                    <ForthSection step={step}/>
                     {/* end forth step */}
 
                     {/* start section five */}

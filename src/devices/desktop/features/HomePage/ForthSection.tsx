@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import ImageFour from "@/assets/images/introduction/forth_step_image.png";
+import ImageFour from "@/assets/images/introduction/image4-lg.png";
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./forthSection.css";
 import {Button} from "@/components/ui/button";
@@ -17,19 +17,19 @@ const ForthSection = (props:Props) =>{
             <ClientMotionComponent
                 step={step}
                 value={4}
-                className={`w-full relative isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center`}>
+                className={`w-full !h-[calc(100vh-92px)] relative isolate overflow-hidden bg-transparent flex items-center gap-[93px] pe-[136px]`}>
 
-                <span className={`font-poppins font-thin text-[90px] text-[#FFFFFF33] relative pt-4`}>04</span>
 
-                <div className={`w-full relative top-0`}>
+                <div className={`w-full relative`}>
+                    <span className={`font-poppins font-thin text-[90px] text-[#FFFFFF33] relative py-4`}>04</span>
                     <h1 className={`font-taviraj font-normal text-[50px] text-white leading-[3rem]`}>
                         Evolve
                         <br/>
                         your
-                        <span className={`font-taviraj italic text-[#ffe9a6]`}> Sales</span>
+                        <span className={`font-taviraj italic text-yellow-100`}> Sales</span>
                     </h1>
-                    <p className={`font-poppins text-[#ffe9a6] text-[16px] leading-6 w-full max-w-[302px] mt-4`}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    <p className={`font-poppins text-yellow-100 text-[16px] leading-6 w-full max-w-[455px] mt-4`}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </p>
                     <Button
                         variant={'outline'}
@@ -40,11 +40,11 @@ const ForthSection = (props:Props) =>{
 
                 <div
                     style={{transformStyle: 'preserve-3d', perspective: '400px'}}
-                    className={`relative isolate w-[262px] h-[242px] top-[-4%] right-[-40%] rotate-animation-rings`}>
+                    className={`relative isolate w-full h-[80%] max-w-[656px] max-h-[646px] rotate-animation-rings`}>
                     <Image
                         src={ImageFour}
                         alt=""
-                        className="object-contain w-full h-full absolute inset-0 z-[-1] rotate-animation"
+                        className="object-contain !max-w-[656px] !max-h-[625px] w-full h-full absolute inset-0 z-[-1] rotate-animation"
                     />
 
                     <div

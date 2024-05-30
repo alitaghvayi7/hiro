@@ -1,21 +1,22 @@
 import Image from "next/image";
-import ImageOne from "@/assets/images/introduction/first_step_image.png";
+import ImageOne from "@/assets/images/introduction/image1-lg.png";
 import dynamic from "next/dynamic";
 import "./firstSection.css";
-import { buttonVariants} from "@/components/ui/button";
+import {buttonVariants} from "@/components/ui/button";
 import Link from "next/link";
 import {cn} from "@/lib/utils/cn";
-const ClientMotionComponent  = dynamic( ()=>import("@/devices/mobile/components/HomePage/ClientMotionComponent"),{ssr:false});
+
+const ClientMotionComponent = dynamic(() => import("@/devices/mobile/components/HomePage/ClientMotionComponent"), {ssr: false});
 
 interface Props {
-    step : number,
+    step: number,
 }
 
-const FirstSection = (props:Props) => {
+const FirstSection = (props: Props) => {
 
     const {step} = props;
 
-    return(
+    return (
         <>
             <ClientMotionComponent
                 step={step}
@@ -40,27 +41,26 @@ const FirstSection = (props:Props) => {
                         More...
                     </Link>
                 </div>
-                <div className={`relative isolate flex justify-between`}>
 
-                <div className={`relative isolate w-[376px] h-[361px] pt-4 rotate-animation`}>
-                        <div
-                            className={` absolute top-0 right-[-88px] w-[298px] h-[292px] z-[-1] isolate flex items-center justify-center rotate-animation`}>
-                            <Image
-                                src={ImageOne}
-                                alt=""
-                                className="object-cover w-full h-full absolute inset-0 z-[-1]"
-                            />
+                <div
+                    className={`relative isolate w-full h-[80%] max-w-[836px] max-h-[804px] rotate-animation flex items-center justify-center`}>
+                    <div
+                        className={`max-w-[662px] max-h-[650px] w-full h-full z-[-1] isolate flex items-center justify-center rotate-animation`}>
+                        <Image
+                            src={ImageOne}
+                            alt=""
+                            className="object-contain w-full h-full absolute inset-0 z-[-1]"
+                        />
 
-                            <div
-                                className={`w-[48px] h-[48px] rounded-full bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute top-0 right-[70px] z-[1] backdrop-blur-[1px]`}></div>
-                        </div>
-
-                        <div
-                            className={`w-[78px] h-[78px] rounded-full bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[125px] left-[12%] z-[1] backdrop-blur-[1px] rotate-animation-one`}></div>
-                        <div
-                            className={`w-[40px] h-[40px] rounded-full bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[75px] right-[-15px] z-[1] backdrop-blur-[1px] rotate-animation-two`}></div>
                     </div>
+                    {/*<div*/}
+                    {/*    className={`w-[48px] h-[48px] rounded-full bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute top-0 right-[20%] top-[50%] z-[1] backdrop-blur-[1px] rotate-animation-two`}></div>*/}
+                    <div
+                        className={`w-[158px] h-[158px] rounded-full bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute left-[12%] bottom-0 z-[1] backdrop-blur-[1px] rotate-animation-one`}></div>
+                    <div
+                        className={`w-[87px] h-[87px] rounded-full bg-gradient-to-b from-[#FFFFFFCC] to-[#FFFFFF00] absolute bottom-[60px] right-0 z-[1] backdrop-blur-[1px] rotate-animation-two`}></div>
                 </div>
+
 
             </ClientMotionComponent>
         </>
