@@ -1,4 +1,4 @@
-import ClientMotionComponent from "@/components/HomePage/ClientMotionComponent";
+import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import Image from "next/image";
 import ImageSix from "@/assets/images/introduction/step_six_image.png";
 import TriangleLeft from "@/assets/images/introduction/trinagle-left.png";

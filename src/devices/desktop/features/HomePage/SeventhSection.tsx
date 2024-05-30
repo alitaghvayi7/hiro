@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ImageSeven from "@/assets/images/introduction/final_step.png";
 import Link from "next/link";
-import ClientMotionComponent from "@/components/HomePage/ClientMotionComponent";
+import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 
 interface Props {
     step: number

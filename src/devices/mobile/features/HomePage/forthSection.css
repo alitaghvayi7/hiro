@@ -1,0 +1,70 @@
+
+
+/* step 4 */
+
+.donate {
+    -webkit-mask-image: url("../../../../assets/images/introduction/Subtract.svg");
+    mask-image: url("../../../../assets/images/introduction/Subtract.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.rotate-animation-rings img.rotate-animation {
+    will-change: transform;
+    animation: rotate-animation-rings 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation-rings div.rotate-animation-one {
+    will-change: transform;
+    animation: rotate-animation-rings-one 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation-rings div.rotate-animation-two {
+    will-change: transform;
+    animation: rotate-animation-rings-two 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.rotate-animation-rings div.rotate-animation-three {
+    will-change: transform;
+    animation: rotate-animation-rings-three 5000ms ease-in-out 1ms infinite alternate;
+}
+
+@keyframes rotate-animation-rings {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-120deg);
+    }
+}
+
+@keyframes rotate-animation-rings-one {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-40px, -55px);
+    }
+}
+
+@keyframes rotate-animation-rings-two {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, -180deg) translate(-60px, -10px);
+    }
+}
+
+@keyframes rotate-animation-rings-three {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}

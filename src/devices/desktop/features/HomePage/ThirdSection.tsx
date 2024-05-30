@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import ImageThree from "@/assets/images/introduction/third_step_iamge.png";
-import ClientMotionComponent from "@/components/HomePage/ClientMotionComponent";
+import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import './thirdSection.css';
 import {Button} from "@/components/ui/button";
 

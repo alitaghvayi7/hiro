@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import ImageFour from "@/assets/images/introduction/forth_step_image.png";
-import ClientMotionComponent from "@/components/HomePage/ClientMotionComponent";
+import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./forthSection.css";
 import {Button} from "@/components/ui/button";
 

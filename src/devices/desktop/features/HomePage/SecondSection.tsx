@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import ImageTwo from "@/assets/images/introduction/second-step-image.png"
-import ClientMotionComponent from "@/components/HomePage/ClientMotionComponent";
+import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./secondSection.css"
 import {Button} from "@/components/ui/button";
 
@@ -18,7 +18,7 @@ const SecondSection = (props: Props) => {
             <ClientMotionComponent
                 step={step}
                 value={2}
-                className={`w-full isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center relative`}>
+                className={`w-full !h-[calc(100vh-92px)] isolate overflow-hidden p-6 bg-transparent flex flex-col justify-center relative`}>
                 <div className={`relative isolate w-[368px] h-[210px] top-8 translate-animation mt-4`}>
                     <Image
                         src={ImageTwo}

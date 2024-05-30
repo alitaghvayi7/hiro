@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import ImageFive from "@/assets/images/introduction/step_five_image.png"
-import ClientMotionComponent from "@/components/HomePage/ClientMotionComponent";
+import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./fifthSection.css"
 import {Button} from "@/components/ui/button";
 

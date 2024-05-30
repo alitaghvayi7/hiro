@@ -3,8 +3,8 @@
 /* step 4 */
 
 .donate {
-    -webkit-mask-image: url("../../assets/images/introduction/Subtract.svg");
-    mask-image: url("../../assets/images/introduction/Subtract.svg");
+    -webkit-mask-image: url("../../../../assets/images/introduction/Subtract.svg");
+    mask-image: url("../../../../assets/images/introduction/Subtract.svg");
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 }

@@ -1,0 +1,62 @@
+/* step 5 */
+
+.translate-animation-chain img.rotate-animation {
+    will-change: transform;
+    animation: translate-animation-chain 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.translate-animation-chain div.rotate-animation-one {
+    will-change: transform;
+    animation: translate-box-animation-chain-one 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.translate-animation-chain div.rotate-animation-two {
+    will-change: transform;
+    animation: translate-box-animation-chain-two 5000ms ease-in-out 1ms infinite alternate;
+}
+
+.translate-animation-chain div.rotate-animation-three {
+    will-change: transform;
+    animation: translate-box-animation-chain-three 5000ms ease-in-out 1ms infinite alternate;
+}
+
+
+@keyframes translate-animation-chain {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(80px, -40px);
+    }
+}
+
+@keyframes translate-box-animation-chain-one {
+    0% {
+        transform: rotate(35deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(35deg) translate(-90px, 70px);
+    }
+}
+
+@keyframes translate-box-animation-chain-two {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-30px, 40px);
+    }
+}
+
+@keyframes translate-box-animation-chain-three {
+    0% {
+        transform: rotate(-40deg) translate(0);
+    }
+
+    100% {
+        transform: rotate(-40deg) translate(-55px);
+    }
+}
