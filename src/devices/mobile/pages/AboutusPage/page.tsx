@@ -6,7 +6,7 @@ import Link from "next/link"
 
 function AboutusPage() {
     return (
-        <section className="w-screen h-screen overflow-hidden bg-gradient-to-b from-[#024343] to-[#001212]">
+        <section className="w-screen h-screen overflow-hidden bg-gradient-to-b from-[#024343] to-[#001212] block lg:hidden">
             <div
                 className={`w-full max-w-[326px] mx-auto fixed bottom-6 left-6 right-6 flex items-center justify-between z-[10]`}>
                 <span className="text-white poppins-medium text-[16px] cursor-pointer">
