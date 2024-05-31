@@ -1,22 +1,22 @@
 'use client';
 
-import {Fragment, useRef, useState} from "react";
+import { Fragment, useRef, useState } from "react";
 import Image from "next/image";
 import FirstSection from "@/devices/desktop/features/HomePage/FirstSection";
 import SecondSection from "@/devices/desktop/features/HomePage/SecondSection";
 import ThirdSection from "@/devices/desktop/features/HomePage/ThirdSection";
 import ForthSection from "@/devices/desktop/features/HomePage/ForthSection";
-import FifthSection from "@/devices/mobile/features/HomePage/FifthSection";
-import SixthSection from "@/devices/mobile/features/HomePage/SixthSection";
-import SeventhSection from "@/devices/mobile/features/HomePage/SeventhSection";
-import ProgressBar from "@/devices/mobile/components/HomePage/ProgressBar";
-import BottomBar from "@/devices/mobile/components/HomePage/BottomBar";
+import FifthSection from "@/devices/desktop/features/HomePage/FifthSection";
+import SixthSection from "@/devices/desktop/features/HomePage/SixthSection";
+import SeventhSection from "@/devices/desktop/features/HomePage/SeventhSection";
+// import ProgressBar from "@/devices/mobile/components/HomePage/ProgressBar";
+// import BottomBar from "@/devices/mobile/components/HomePage/BottomBar";
 
 import Logo from "@/assets/images/logo-lg.png"
 import Link from "next/link";
-import {cn} from "@/lib/utils/cn";
-import {Button, buttonVariants} from "@/components/ui/button";
-import {ArrowDownIcon, ArrowDownTrayIcon} from "@heroicons/react/24/outline";
+import { cn } from "@/lib/utils/cn";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { ArrowDownIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 
 export default function HomePage(): React.ReactNode {
 
@@ -31,35 +31,33 @@ export default function HomePage(): React.ReactNode {
         <Fragment>
             <section
                 className="hidden lg:block px-8 2xl:px-0 w-screen max-w-[1490px] mx-auto h-screen overflow-hidden bg-gradient-to-b from-[#024343] to-[#001212] relative isolate">
-                {/* progreass bar */}
-                {/*<ProgressBar step={step}/>*/}
-                {/* progress bar */}
+
                 <nav
                     className={` w-full h-[60px] bg-transparent flex mt-8 items-center gap-[294px] justify-between relative z-[-10] isolate`}>
                     <div className={`flex items-center gap-[94px]`}>
-                        <Image src={Logo} alt={''} className={`h-[60px] w-[40px] drop-shadow-sm object-cover`}/>
+                        <Image src={Logo} alt={''} className={`h-[60px] w-[40px] drop-shadow-sm object-cover`} />
                         <menu className={`flex w-[424px] justify-around items-center`}>
                             <Link
                                 href={'/'}
-                                className={cn(buttonVariants({variant: "outline"}), 'border-none text-white font-[300] text-[16px] font-poppins')}
+                                className={cn(buttonVariants({ variant: "outline" }), 'border-none text-white font-[300] text-[16px] font-poppins')}
                             >
                                 Home
                             </Link>
                             <Link
                                 href={'/'}
-                                className={cn(buttonVariants({variant: "outline"}), 'border-none text-white font-[300] text-[16px] font-poppins opacity-50')}
+                                className={cn(buttonVariants({ variant: "outline" }), 'border-none text-white font-[300] text-[16px] font-poppins opacity-50')}
                             >
                                 Services
                             </Link>
                             <Link
                                 href={'/'}
-                                className={cn(buttonVariants({variant: "outline"}), 'border-none text-white font-[300] text-[16px] font-poppins opacity-50')}
+                                className={cn(buttonVariants({ variant: "outline" }), 'border-none text-white font-[300] text-[16px] font-poppins opacity-50')}
                             >
                                 About us
                             </Link>
                             <Link
                                 href={'/'}
-                                className={cn(buttonVariants({variant: "outline"}), 'border-none text-white font-[300] text-[16px] font-poppins opacity-50')}
+                                className={cn(buttonVariants({ variant: "outline" }), 'border-none text-white font-[300] text-[16px] font-poppins opacity-50')}
                             >
                                 Contact us
                             </Link>
@@ -68,7 +66,7 @@ export default function HomePage(): React.ReactNode {
                     <div className={`flex items-center gap-10`}>
                         <span
                             className={`text-white font-poppins font-[300] text-[16px] cursor-pointer`}>
-                                EN  /  FA
+                            EN  /  FA
                         </span>
                         <Button
                             variant={'outline'}
@@ -77,15 +75,15 @@ export default function HomePage(): React.ReactNode {
                             <span className={`text-[16px]`}>
                                 Catalog
                             </span>
-                            <ArrowDownTrayIcon className={`w-5 h-5`}/>
+                            <ArrowDownTrayIcon className={`w-5 h-5`} />
                         </Button>
                     </div>
                 </nav>
 
                 <div className={`flex items-center gap-2 absolute z-[20] left-[50%] bottom-8 translate-x-[-50%]`}>
-                        <span className={`text-white font-poppins font-light leading-6 text-[16px] cursor-pointer`}>
-                            Scroll to discover
-                        </span>
+                    <span className={`text-white font-poppins font-light leading-6 text-[16px] cursor-pointer`}>
+                        Scroll to discover
+                    </span>
                     <Button
                         variant={'outline'}
                         onClick={() => {
@@ -98,7 +96,7 @@ export default function HomePage(): React.ReactNode {
                             }
                         }}
                         className={`w-8 h-8 rounded-[8px] flex items-center justify-center button-animation`}>
-                        <ArrowDownIcon className="w-5 h-5 text-white"/>
+                        <ArrowDownIcon className="w-5 h-5 text-white" />
                     </Button>
                 </div>
 
@@ -114,10 +112,6 @@ export default function HomePage(): React.ReactNode {
                             className={`block h-full bg-gradient-to-r from-[#F5C61A] to-[#F47C20] transition-all`}></span>
                     </span>
                 </div>
-                {/* Bottom menu */}
-                {/*<BottomBar container={container!} setStep={setStep} step={step}/>*/}
-                {/* bottom menu */}
-
 
                 <section
                     ref={container}
@@ -134,31 +128,31 @@ export default function HomePage(): React.ReactNode {
                 >
 
                     {/* Start First Step */}
-                    <FirstSection step={step}/>
+                    <FirstSection step={step} />
                     {/* End First Step */}
 
                     {/* Start Second Step */}
-                    <SecondSection step={step}/>
+                    <SecondSection step={step} />
                     {/* End Second Step */}
 
                     {/* start Third Step */}
-                    <ThirdSection step={step}/>
+                    <ThirdSection step={step} />
                     {/* End Third Step */}
 
                     {/* start forth step */}
-                    <ForthSection step={step}/>
+                    <ForthSection step={step} />
                     {/* end forth step */}
 
                     {/* start section five */}
-                    {/*<FifthSection step={step}/>*/}
+                    <FifthSection step={step} />
                     {/* end section five */}
 
                     {/* start section six */}
-                    {/*<SixthSection step={step}/>*/}
+                    <SixthSection step={step} />
                     {/* end section six */}
 
                     {/* start section seven */}
-                    {/*<SeventhSection step={step}/>*/}
+                    <SeventhSection step={step} />
                     {/* end section seven */}
 
                 </section>
