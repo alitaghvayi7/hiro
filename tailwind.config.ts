@@ -54,8 +54,8 @@ const config = {
           "02": "#535353",
           "01": "#313131",
         },
-        yellow:{
-          100:"#FFE9A6"
+        yellow: {
+          100: "#FFE9A6"
         },
         // white:{
         //   800:''
@@ -105,11 +105,11 @@ const config = {
           },
         ],
       },
-      fontFamily:{
-        taviraj : ["var(--font-taviraj)"],
-        poppins : ["var(--font-poppins)"],
-        roboto : ["var(--font-roboto)"],
-      }
+      fontFamily: {
+        taviraj: 'var(--font-taviraj)',
+        roboto: 'var(--font-roboto)',
+        poppins: 'var(--font-poppins)',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
