@@ -117,6 +117,7 @@ const ChartComponent = () => {
             <Line
                 options={options}
                 data={data}
+                className={`w-full h-full`}
             />
         </div>
     )

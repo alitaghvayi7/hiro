@@ -14,7 +14,7 @@ export default function AdvertisePage() {
     return (
         <>
             <section
-                className="w-screen min-h-screen overflow-hidden overflow-y-auto bg-gradient-to-b from-[#024343] to-[#001212]">
+                className="block lg:hidden w-screen min-h-screen overflow-hidden overflow-y-auto bg-gradient-to-b from-[#024343] to-[#001212]">
                 <div className={`w-full flex items-center justify-between pt-4 px-6`}>
                     <Link
                         href={'/'}
