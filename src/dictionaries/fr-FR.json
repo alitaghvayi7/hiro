@@ -1,0 +1,109 @@
+{
+  "header": {
+    "slogan": "Protégez votre bien",
+    "home": "Accueil",
+    "blog": "Blog",
+    "terms": "Termes",
+    "privacy": "Confidentialité",
+    "api": "API",
+    "faq": "FAQ",
+    "about": "À propos de nous"
+  },
+  "homepage": {
+    "whatIs": "Qu’est-ce que Mediaverse ?",
+    "description": "Mediaverse Platform est la nouvelle génération d'outils de gestion d'actifs multimédias pour les télévisions sociales (ou médias sociaux) qui aide les utilisateurs à gérer le cycle de contenu depuis l'approvisionnement (ou la production) jusqu'à la distribution.",
+    "exploreLimitless": "Explorez sans limites !",
+    "liveTvChannels": "Chaînes de télévision en direct",
+    "bestVideos": "Meilleures vidéos",
+    "mostViewedImages": "Images les plus vues",
+    "topTexts": "Meilleurs textes",
+    "bestSongs": "Meilleures chansons"
+  },
+  "footer": {
+    "haveNotTriedTheAppYet": "Vous n'avez pas encore essayé l'application ?"
+  },
+  "blogSection": {
+    "appNews": "Actualités MediaVerse",
+    "alwaysBeUpdate": "Soyez toujours à jour !"
+  },
+  "faqSection": {
+    "title": "Fonctionnalités de MediaVers"
+  },
+  "aboutUs": {
+    "office": "Bureau",
+    "phone": "Téléphone",
+    "email": "Email"
+  },
+  "appSidebar": {
+    "explore": "Explorer",
+    "account": "Compte",
+    "wallet": "Portefeuille",
+    "settings": "Paramètres",
+    "logout": "Se déconnecter"
+  },
+  "appAccounts": {
+    "assets": "Actifs",
+    "sales": "Montant des ventes",
+    "volume": "Volume des ventes",
+    "subscribes": "Abonné",
+    "myAssets": "Mon actif",
+    "all": "Tout",
+    "noContentToShow": "Aucun contenu à afficher"
+  },
+  "appWallet": {
+    "inventory": "Solde",
+    "addInventory": "Augmenter le solde",
+    "notConnetToStripe": "Impossible de se connecter à Stripe pour le moment. Veuillez réessayer plus tard.",
+    "completeInfo": "Veuillez d'abord compléter vos informations :",
+    "clickHere": "Cliquez ici",
+    "connectToStripe": "Se connecter à Stripe"
+  },
+  "generalApp": {
+    "viewAll": "Voir tout",
+    "dailyRecommended": "Quotidien recommandé",
+    "recently": "Récemment",
+    "bestInMonth": "Meilleur du mois",
+    "search": "Recherche",
+    "signUp": "S'inscrire",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "webApp": "Application Web",
+    "tag": "Étiquette",
+    "searchIn": "Rechercher dans",
+    "searchInMore": "Recherchez dans plus de 2 000 000 de contenus"
+  },
+  "setting": {
+    "account": "Compte",
+    "message": "Message",
+    "wallet": "Portefeuille",
+    "analytics": "Analytique",
+    "shareAccount": "Partager le compte",
+    "messages": "Messages",
+    "noMessage": "Vous n'avez pas de messages",
+    "generalInforamtion": "Informations générales",
+    "signIns": "Connexions",
+    "sessions": "Séances"
+  },
+  "auth": {
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "email": "Email",
+    "password": "Mot de passe",
+    "cellPhone": "Téléphone portable",
+    "edit": "Modifier",
+    "confirmLogout": "Êtes-vous sûr de vouloir vous déconnecter?",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "login":{
+    "signUpWithApple": "S'inscrire avec Apple",
+    "signUpWithGoogle": "S'inscrire avec Google",
+    "signUpWithFacebook": "S'inscrire avec Facebook",
+    "signUpWithX": "S'inscrire avec X",
+    "or": "Ou",
+    "noAccount": "Pas de compte?",
+    "signInWithPassQ": "Se connecter avec un mot de passe?",
+    "signInWithOtpQ": "Se connecter avec un code?",
+    "sendCode": "Envoyer le code"
+  }
+}
