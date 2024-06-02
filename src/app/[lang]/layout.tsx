@@ -2,7 +2,8 @@ import type {Metadata, Viewport} from "next";
 import {Poppins, Taviraj, Roboto} from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
-import TransitionProvider from "@/components/providers/TransitionProvider";
+// import TransitionProvider from "@/components/providers/TransitionProvider";
+const TransitionProvider = dynamic(()=>import('@/components/providers/TransitionProvider'),{ssr:false})
 import {cn} from "@/lib/utils/cn";
 // import { appWithTranslation } from '../../i18n';
 import {NextIntlClientProvider, useTranslations} from 'next-intl';
@@ -10,6 +11,7 @@ import {getMessages} from 'next-intl/server';
 import {getDictionary} from "@/dictionary";
 import {Locale} from "@/types/dictionary";
 import {locales} from "@/middleware";
+import dynamic from "next/dynamic";
 
 const taviraj = Taviraj({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -78,6 +80,14 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
     themeColor: "#FFFFFF",
 };
+
+// export async function generateStaticParams() {
+//   return locales.map((locale) => ({
+//     lang: locale,
+//   }));
+// }
+
+
 
 async function RootLayout(
     {
