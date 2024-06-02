@@ -22,7 +22,7 @@ function AboutusPage() {
             </div>
 
 
-            <section className={`w-full max-w-[326px] h-[calc(100%-105px)] mx-auto relative isolate overflow-hidden overflow-y-auto m-8 bg-transparent flex flex-col items-center`}>
+            <div className={`w-full max-w-[326px] h-[calc(100%-105px)] mx-auto relative isolate overflow-hidden overflow-y-auto m-8 bg-transparent flex flex-col items-center`}>
                 <Image alt='' src={MapImage} className={`w-full h-[326px] object-cover rounded-[16px]`} />
                 <div className="w-full about-us-table">
                     <div className="w-full flex items-center justify-between h-[56px] rounded-[8px] p-4" dir="ltr">
@@ -53,7 +53,7 @@ function AboutusPage() {
                         <span className={`font-poppins text-[14px] text-white font-[400]`}>@Iraneziba</span>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     )
 }
