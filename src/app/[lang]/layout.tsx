@@ -81,11 +81,11 @@ export const viewport: Viewport = {
     themeColor: "#FFFFFF",
 };
 
-export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    lang: locale,
-  }));
-}
+// export async function generateStaticParams() {
+//   return locales.map((locale) => ({
+//     lang: locale,
+//   }));
+// }
 
 
 
