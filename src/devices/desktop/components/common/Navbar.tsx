@@ -23,7 +23,7 @@ const Navbar = () => {
                     </span>
                     <Button
                         variant={'outline'}
-                        className={`border-yellow-100 text-yellow-100 w-[154px] rounded-[8px] h-[40px]`}
+                        className={`border-yellow-100 text-yellow-100 w-[154px] rounded-[8px] h-[40px] gap-1 flex font-poppins text-base font-light`}
                     >
                         <span className={`text-[16px]`}>
                             Catalog
