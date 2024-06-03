@@ -1,14 +1,9 @@
-
-import MobileAboutusPage from "@/devices/mobile/pages/AboutusPage/page"
 import DesktopAboutusPage from "@/devices/desktop/pages/AboutusPage/page"
 
-function AboutusPage() {
+export default function AboutusPage() {
     return (
         <>
-            <MobileAboutusPage />
-            <DesktopAboutusPage />
+            <DesktopAboutusPage/>
         </>
     )
 }
-
-export default AboutusPage

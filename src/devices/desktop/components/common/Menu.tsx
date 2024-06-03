@@ -16,19 +16,19 @@ const Menu = () => {
                 Home
             </Link>
             <Link
-                href={'/'}
+                href={'/services'}
                 className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/as' ? 'opacity-100' : 'opacity-50'}`)}
             >
                 Services
             </Link>
             <Link
                 href={'/aboutus'}
-                className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/aboutus' ? 'opacity-100' : 'opacity-50'}`)}
+                className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/contactus' ? 'opacity-100' : 'opacity-50'}`)}
             >
                 About us
             </Link>
             <Link
-                href={'/'}
+                href={'/contactus'}
                 className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/contactus' ? 'opacity-100' : 'opacity-50'}`)}
             >
                 Contact us

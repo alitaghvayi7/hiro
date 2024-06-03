@@ -1,9 +1,9 @@
 'use client';
 
-import {motion} from "framer-motion"
+import {motion,MotionProps} from "framer-motion"
 import {cn} from "@/lib/utils/cn";
 
-interface Props {
+interface Props extends MotionProps {
     children?: React.ReactNode,
     className?: string,
 }
@@ -11,8 +11,8 @@ interface Props {
 const ClientSectionMotion = (props: Props) => {
 
     const {
-        className,
         children,
+        className,
         ...others
     } = props;
 
