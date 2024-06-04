@@ -54,5 +54,30 @@
       "description": "From now on, you will have a dynamic and creative thinking room...",
       "linkcontent": "More..."
     }
+  },
+  "about": {
+    "title": "About us",
+    "paragraph-1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "paragraph-2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n"    ,
+    "paragraph-3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "paragraph-4": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n"
+  },
+  "footer": {
+    "contact": {
+      "title": "Contact Us",
+      "phone": "0901254789",
+      "email" : "example@gmail.com",
+      "address": "Iran, Tehran, Azadi street"
+    },
+    "links": {
+      "title": "Links",
+      "home": "Home",
+      "services": "Services",
+      "download": "Category Download"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    }
   }
 }

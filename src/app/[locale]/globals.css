@@ -10,6 +10,7 @@
 
  html[lang='fa'] > *{
    font-family: var(--font-iransans)!important;
+   letter-spacing: 0!important;
  }
 
 .no-scrollbar {

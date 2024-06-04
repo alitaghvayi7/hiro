@@ -4,8 +4,10 @@ import Image from "next/image";
 import ImageOne from "@/assets/images/advertise/Frame12-lg.png";
 import ImageSeven from "@/assets/images/introduction/image7-lg.png";
 import {Separator} from "@/components/ui/seprator";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 export default function AboutusPage () {
+    const translate = useTranslate('about');
     return(
         <>
             <RootLayout>
@@ -26,20 +28,13 @@ export default function AboutusPage () {
                         <div className={`flex flex-col gap-4`}>
 
                             <div>
-                                <h1 className={`text-[90px] text-yellow-500 font-[100] tracking-[.5rem] italic font-taviraj`}>
-                                    About us
+                                <h1 className={`text-[90px] text-yellow-500 font-[100] ltr:tracking-[.5rem] rtl:tracking-[0] italic font-taviraj`}>
+                                    {translate('title')}
                                 </h1>
                                 <p className={`text-[#FFFFFFCC] text-[20px] font-[300] break-words font-poppins mt-10`}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem
-                                    Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-                                    simply dummy text of the printing and typesetting industry.
+                                    {translate('paragraph-1')}
                                     <br/><br/><br/><br/>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem
-                                    Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-                                    simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply
-                                    dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text
-                                    of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry.
+                                    {translate('paragraph-2')}
                                 </p>
                             </div>
 
@@ -53,16 +48,9 @@ export default function AboutusPage () {
                             </div>
 
                             <p className={`text-[#FFFFFFCC] text-[20px] font-[300] break-words font-poppins mt-10`}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy
-                                text of the printing and typesetting industry.
+                                {translate('paragraph-3')}
                                 <br/><br/><br/><br/>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy
-                                text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the
-                                printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry.
+                                {translate('paragraph-4')}
                             </p>
                         </div>
                     </div>
