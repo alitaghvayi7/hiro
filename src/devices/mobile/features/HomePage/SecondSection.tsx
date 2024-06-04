@@ -1,9 +1,9 @@
-
 import Image from "next/image";
 import ImageTwo from "@/assets/images/introduction/second-step-image.png"
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./secondSection.css"
 import {Button} from "@/components/ui/button";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 interface Props {
     step: number,
@@ -12,6 +12,7 @@ interface Props {
 const SecondSection = (props: Props) => {
 
     const {step} = props;
+    const translate = useTranslate('home.second');
 
     return (
         <>
@@ -40,18 +41,19 @@ const SecondSection = (props: Props) => {
 
                 <div className={`relative top-[-6%]`}>
                     <h1 className={`font-taviraj font-normal text-[50px] text-white max-w-[267px] leading-[3rem]`}>
-                        What do
+                        {translate('title-p-1')}
                         <br/>
-                        <span className={`font-taviraj font-medium italic text-[#ffe9a6]`}>People </span>
-                        say about you?
+                        <span
+                            className={`font-taviraj font-medium italic text-[#ffe9a6]`}>{translate('subtitle-1')}</span>
+                        {translate('title-p-2')}
                     </h1>
                     <p className={`font-poppins text-[#ffe9a6] text-[16px] leading-6 w-full mt-4`}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        {translate('description')}
                     </p>
                     <Button
                         variant={'outline'}
                         className={`w-[126px] h-10 mt-4 font-poppins font-light rounded-[8px]`}>
-                        More...
+                        {translate('linkcontent')}
                     </Button>
                 </div>
 

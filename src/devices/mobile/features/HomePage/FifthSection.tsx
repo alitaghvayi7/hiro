@@ -4,6 +4,7 @@ import ImageFive from "@/assets/images/introduction/step_five_image.png"
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./fifthSection.css"
 import {Button} from "@/components/ui/button";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 interface Props {
     step : number,
@@ -11,6 +12,8 @@ interface Props {
 
 const FifthSection = (props:Props) =>{
     const {step} = props;
+    const translate = useTranslate('home.fifth')
+
     return (
         <ClientMotionComponent
             step={step}
@@ -37,19 +40,19 @@ const FifthSection = (props:Props) =>{
             </div>
             <div className={`relative top-0 self-end flex flex-col items-end`}>
                 <h1 className={`font-taviraj font-normal text-[50px] text-white leading-[3rem] max-w-[330px] text-end`}>
-                    Become more
+                    {translate('title-p-1')}
                     <br/>
-                    <span className={`font-taviraj-italic text-[#ffe9a6]`}>Coherent </span>
-                    and
-                    <span className={`font-taviraj italic text-[#ffe9a6]`}> Structured</span>
+                    <span className={`font-taviraj-italic text-[#ffe9a6]`}>{translate('subtitle-1')}</span>
+                    {translate('title-p-2')}
+                    <span className={`font-taviraj italic text-[#ffe9a6]`}>{translate('subtitle-2')}</span>
                 </h1>
                 <p className={`font-poppins text-[#ffe9a6] text-[16px] leading-6 text-end max-w-[290px] mt-4`}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    {translate('description')}
                 </p>
                 <Button
                     variant={'outline'}
                     className={`w-[126px] h-10 mt-4 text-white rounded-[8px] font-poppins`}>
-                    More...
+                    {translate('linkcontent')}
                 </Button>
             </div>
         </ClientMotionComponent>

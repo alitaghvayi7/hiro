@@ -5,6 +5,7 @@ import TriangleLeft from "@/assets/images/introduction/trinagle-left.png";
 import TriangleRight from "@/assets/images/introduction/triangle-right.png";
 import './sixthSection.css';
 import {Button} from "@/components/ui/button";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 interface Props{
     step:number
@@ -13,6 +14,7 @@ interface Props{
 const SixthSection = (props:Props) => {
 
     const {step} = props;
+    const translate = useTranslate('home.sixth');
 
     return(
         <>
@@ -46,17 +48,17 @@ const SixthSection = (props:Props) => {
                 </div>
                 <div className={`relative top-[-8%] flex flex-col`}>
                     <h1 className={`font-taviraj font-normal text-[50px] text-white leading-[3rem]`}>
-                        Don't be
-                        <span className={`font-taviraj italic text-[#ffe9a6]`}>Left behind </span>
-                        in the Startup field of your industry!
+                        {translate('title-p-1')}
+                        <span className={`font-taviraj italic text-[#ffe9a6]`}>{translate('subtitle-1')}</span>
+                        {translate('title-p-2')}
                     </h1>
                     <p className={`font-poppins text-[#ffe9a6] text-[16px] leading-6 max-w-[290px] mt-4`}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        {translate('description')}
                     </p>
                     <Button
                         variant={'outline'}
                         className={`w-[126px] h-10 mt-4 rounded-[8px] font-poppins`}>
-                        More...
+                        {translate('linkcontent')}
                     </Button>
                 </div>
             </ClientMotionComponent>
