@@ -41,7 +41,7 @@ const DesktopFooter = () => {
             </div>
             <div className={`flex flex-col justify-between h-full gap-2`}>
                 <h5 className={`font-poppins font-[500] text-yellow-100 text-[14px] ltr:text-end rtl:text-start`}>{translate('contact.title')}</h5>
-                <div className={`flex items-center justify-between`}>
+                <div className={`flex items-center justify-end gap-2`}>
                         <span
                             className={`font-poppins font-[300] text-[#FFFFFFCC] text-[12px] leading-4 max-w-[135px] block`}>
                             {translate('contact.phone')}
@@ -52,7 +52,7 @@ const DesktopFooter = () => {
                     </div>
                 </div>
 
-                <div className={`flex items-center justify-between`}>
+                <div className={`flex items-center justify-end gap-2`}>
                         <span
                             className={`font-poppins font-[300] text-[#FFFFFFCC] text-[12px] leading-4 block`}>
                             {translate('contact.email')}
@@ -63,7 +63,7 @@ const DesktopFooter = () => {
                     </div>
                 </div>
 
-                <div className={`flex items-center justify-between`}>
+                <div className={`flex items-center justify-end gap-2`}>
                         <span
                             className={`font-poppins font-[300] text-[#FFFFFFCC] text-[12px] leading-4 block`}>
                             {translate('contact.address')}
