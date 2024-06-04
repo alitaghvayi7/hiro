@@ -19,13 +19,13 @@ const Menu = () => {
             </Link>
             <Link
                 href={'/services'}
-                className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/as' ? 'opacity-100' : 'opacity-50'}`)}
+                className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/services' ? 'opacity-100' : 'opacity-50'}`)}
             >
                 {translate('services')}
             </Link>
             <Link
                 href={'/aboutus'}
-                className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/contactus' ? 'opacity-100' : 'opacity-50'}`)}
+                className={cn(buttonVariants({ variant: "outline" }), `border-none text-white font-[300] text-[16px] font-poppins ${pathname === '/aboutus' ? 'opacity-100' : 'opacity-50'}`)}
             >
                 {translate('about')}
             </Link>
