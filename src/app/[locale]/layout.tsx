@@ -3,12 +3,14 @@ import { Poppins, Taviraj, Roboto } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import dynamic from "next/dynamic";
-const TransitionProvider = dynamic(() => import('@/components/providers/TransitionProvider'), { ssr: false })
 import { cn } from "@/lib/utils/cn";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import {getMessages, unstable_setRequestLocale} from 'next-intl/server';
 import localFont from 'next/font/local'
 import {locales} from "@/navigation";
+
+const TransitionProvider = dynamic(() => import('@/components/providers/TransitionProvider'), { ssr: false })
+
 
 const iransans = localFont({
     src: [
@@ -61,7 +63,6 @@ const iransans = localFont({
     preload: true,
     variable: '--font-iransans'
 });
-
 
 const taviraj = Taviraj({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -128,6 +129,8 @@ async function RootLayout(
     } else {
         font = iransans.variable
     }
+
+    unstable_setRequestLocale(locale);
 
     return (
         <html lang={`${locale}`} dir={['fa', 'ar'].includes(locale) ? 'rtl' : 'ltr'}>
