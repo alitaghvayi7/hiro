@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ImageSeven from "@/assets/images/introduction/image7-lg.png";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 
 interface Props {

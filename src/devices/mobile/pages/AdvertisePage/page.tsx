@@ -4,7 +4,7 @@ import VideoImage from "@/assets/images/advertise/Frame12.png";
 import {Separator} from "@/components/ui/seprator";
 import ChartComponent from "@/devices/mobile/components/AdvertisePage/ChartComponent";
 import MobileFooter from "@/devices/mobile/components/common/MobileFooter";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import {cn} from "@/lib/utils/cn";
 import {buttonVariants} from "@/components/ui/button";
 import {ArrowLeftIcon} from "@heroicons/react/24/solid";

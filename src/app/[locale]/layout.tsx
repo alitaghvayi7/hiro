@@ -2,16 +2,68 @@ import type {Metadata, Viewport} from "next";
 import {Poppins, Taviraj, Roboto} from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
-// import TransitionProvider from "@/components/providers/TransitionProvider";
-const TransitionProvider = dynamic(()=>import('@/components/providers/TransitionProvider'),{ssr:false})
-import {cn} from "@/lib/utils/cn";
-// import { appWithTranslation } from '../../i18n';
-import {NextIntlClientProvider, useTranslations} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {getDictionary} from "@/dictionary";
-import {Locale} from "@/types/dictionary";
-import {locales} from "@/middleware";
 import dynamic from "next/dynamic";
+// import TransitionProvider from "@/components/providers/TransitionProvider";
+const TransitionProvider = dynamic(() => import('@/components/providers/TransitionProvider'), {ssr: false})
+import {cn} from "@/lib/utils/cn";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
+import localFont from 'next/font/local'
+
+const iransans = localFont({
+    src: [
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_UltraLight.ttf",
+            weight: "100",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_UltraLight.ttf",
+            weight: "200",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_Light.ttf",
+            weight: "300",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum.ttf",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_Medium.ttf",
+            weight: "500",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_Bold.ttf",
+            weight: "600",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_Bold.ttf",
+            weight: "700",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_Black.ttf",
+            weight: "800",
+            style: "normal",
+        },
+        {
+            path: "../../../public/assets/fonts/IRANSansWeb_FaNum_Black.ttf",
+            weight: "900",
+            style: "normal",
+        }
+    ],
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    preload: true,
+    style: ['normal'],
+    variable: '--font-iransans'
+});
+
 
 const taviraj = Taviraj({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -81,34 +133,33 @@ export const viewport: Viewport = {
     themeColor: "#FFFFFF",
 };
 
-// export async function generateStaticParams() {
-//   return locales.map((locale) => ({
-//     lang: locale,
-//   }));
-// }
-
-
 
 async function RootLayout(
     {
         children,
-        params: { lang },
+        params: {locale}
     }: {
         children: React.ReactNode;
-        params: { lang: Locale };
+        params: { locale: string };
     }) {
 
-    const message = await getDictionary(
-        locales.find((item) => item === lang) ?? locales[0]
-    );
+    const messages = await getMessages();
 
-    console.log(message)
+    console.log(messages)
+
+    let font = null;
+
+    if (locale !== 'fa') {
+        font = taviraj.variable + " " + poppins.variable + " " + roboto.variable
+    } else {
+        font = iransans.variable
+    }
 
     return (
-        <html lang={`${lang}`} dir={['fa', 'ar'].includes(lang) ? 'rtl' : 'ltr'}>
+        <html lang={`${locale}`} dir={['fa', 'ar'].includes(locale) ? 'rtl' : 'ltr'}>
         <body
-            className={cn("bg-gradient-to-b from-[#024343] to-[#001212]", taviraj.variable, poppins.variable, roboto.variable)}>
-        {/*<NextIntlClientProvider messages={messages}>*/}
+            className={cn("bg-gradient-to-b from-[#024343] to-[#001212]", font)}>
+        <NextIntlClientProvider messages={messages}>
             <NextTopLoader
                 color={"#FFE9A6"}
                 showSpinner={false}
@@ -117,7 +168,7 @@ async function RootLayout(
             <TransitionProvider>
                 {children}
             </TransitionProvider>
-        {/*</NextIntlClientProvider>*/}
+        </NextIntlClientProvider>
         </body>
         </html>
     );

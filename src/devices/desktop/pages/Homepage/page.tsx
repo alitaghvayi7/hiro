@@ -13,7 +13,7 @@ import SeventhSection from "@/devices/desktop/features/HomePage/SeventhSection";
 // import BottomBar from "@/devices/mobile/components/HomePage/BottomBar";
 
 import Logo from "@/assets/images/logo-lg.png"
-import Link from "next/link";
+import {Link} from "@/navigation";
 import { cn } from "@/lib/utils/cn";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowDownIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
@@ -51,7 +51,7 @@ export default function HomePage(): React.ReactNode {
             </div>
 
             <div
-                className={` w-[2px] h-full max-h-[326px] flex items-center justify-between absolute z-[20] isolate right-8 gap-3 top-[50%] translate-y-[-50%]`}>
+                className={` w-[2px] h-full max-h-[326px] flex items-center justify-between absolute z-[20] isolate ltr:right-8 rtl:left-8 gap-3 top-[50%] translate-y-[-50%]`}>
                 <span
                     className={`w-full h-full overflow-hidden bg-white bg-opacity-20 `}>
                     <span

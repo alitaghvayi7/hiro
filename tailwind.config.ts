@@ -110,6 +110,7 @@ const config = {
         taviraj: 'var(--font-taviraj)',
         roboto: 'var(--font-roboto)',
         poppins: 'var(--font-poppins)',
+        iransans: 'var(--font-iransans)',
       },
     },
   },

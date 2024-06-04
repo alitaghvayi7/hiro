@@ -1,7 +1,7 @@
 import Image from "next/image";
 import HiroLogo from "@/assets/images/hiro-logo-sm.png";
 import {EnvelopeIcon, MapPinIcon, PhoneIcon} from "@heroicons/react/24/solid";
-import Link from "next/link";
+import {Link} from "@/navigation";
 
 
 const DesktopFooter = () => {

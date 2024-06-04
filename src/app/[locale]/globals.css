@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-taviraj: 'Taviraj', serif;
-  --font-roboto: 'Roboto', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-}
+/*:root {*/
+/*  --font-taviraj: 'Taviraj', serif;*/
+/*  --font-roboto: 'Roboto', sans-serif;*/
+/*  --font-poppins: 'Poppins', sans-serif;*/
+/*}*/
+
+ html[lang='fa'] > *{
+   font-family: var(--font-iransans)!important;
+ }
 
 .no-scrollbar {
   -ms-overflow-style: none;

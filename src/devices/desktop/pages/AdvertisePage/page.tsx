@@ -5,7 +5,7 @@ import VideoImage from "@/assets/images/advertise/Frame12.png";
 import {Separator} from "@/components/ui/seprator";
 import ChartComponent from "@/devices/mobile/components/AdvertisePage/ChartComponent";
 import MobileFooter from "@/devices/mobile/components/common/MobileFooter";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import {cn} from "@/lib/utils/cn";
 import {buttonVariants} from "@/components/ui/button";
 import {ArrowLeftIcon} from "@heroicons/react/24/solid";
@@ -25,11 +25,11 @@ export default function AdvertisePage() {
                         <ClientSectionMotion
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.3 }}
+                            // viewport={{ once: true }}
+                            transition={{duration: 1, delay: .3}}
                             variants={{
-                                visible: { opacity: 1, scale: 1 },
-                                hidden: { opacity: 0, scale: 0 }
+                                visible: {opacity: 1},
+                                hidden: {opacity: 0}
                             }}
                         >
                             <p className={`text-[#FFFFFFCC] text-[20px] font-[300] max-w-[436px] break-words font-poppins`}>
@@ -43,13 +43,24 @@ export default function AdvertisePage() {
                             </p>
                         </ClientSectionMotion>
 
-                        <div className={`ps-8 flex items-center gap-[220px]`}>
-                            <Separator orientation={`vertical`}
-                                       className={`bg-[#FFFFFF33] min-h-[175px] h-[50%] max-h-[576px]`}/>
-                            <h1 className={`text-[150px] text-yellow-100 font-[100] tracking-[2rem] italic font-taviraj`}>
-                                Advertise
-                            </h1>
-                        </div>
+                        <ClientSectionMotion
+                            initial="hidden"
+                            whileInView="visible"
+                            // viewport={{ once: true }}
+                            transition={{duration: 1, delay: .3}}
+                            variants={{
+                                visible: {opacity: 1},
+                                hidden: {opacity: 0}
+                            }}
+                        >
+                            <div className={`ps-8 flex items-center gap-[220px]`}>
+                                <Separator orientation={`vertical`}
+                                           className={`bg-[#FFFFFF33] min-h-[175px] h-[50%] max-h-[576px]`}/>
+                                <h1 className={`text-[150px] text-yellow-100 font-[100] tracking-[2rem] italic font-taviraj`}>
+                                    Advertise
+                                </h1>
+                            </div>
+                        </ClientSectionMotion>
 
                         <div
                             className={`max-w-[662px] max-h-[650px] w-full h-full absolute bottom-[10%] right-[10%] z-[-1] isolate flex items-center justify-center rotate-animation`}>
@@ -63,22 +74,47 @@ export default function AdvertisePage() {
                     </div>
 
                     <div className={`flex flex-col w-full`}>
-                        <p className={`text-[#FFFFFFCC] text-[20px] font-[300] max-w-[436px] break-words font-poppins mt-[5rem]`}>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-                            simply dummy text of the printing and typesetting industry.
-                        </p>
-                        <p className={`self-end text-right rtl:text-left text-[#FFFFFFCC] text-[20px] font-[300] max-w-[436px] break-words font-poppins my-[146px]`}>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
-                            simply dummy text of the printing and typesetting industry.
-                        </p>
                         <ClientSectionMotion
                             initial="hidden"
                             whileInView="visible"
                             // viewport={{once: true}}
-                            transition={{duration:1,ease:'easeInOut',delay:.3}}
+                            transition={{duration: 1, ease: 'easeInOut', delay: .3}}
                             variants={{
-                                visible: {opacity: 1,scaleX:1},
-                                hidden: {opacity: 0,scaleX:0}
+                                visible: {opacity: 1},
+                                hidden: {opacity: 0}
+                            }}
+                        >
+                            <p className={`text-[#FFFFFFCC] text-[20px] font-[300] max-w-[436px] break-words font-poppins mt-[5rem]`}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+                                simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </ClientSectionMotion>
+
+                        <ClientSectionMotion
+                            initial="hidden"
+                            whileInView="visible"
+                            // viewport={{once: true}}
+                            transition={{duration: 1, ease: 'easeInOut', delay: .3}}
+                            variants={{
+                                visible: {opacity: 1},
+                                hidden: {opacity: 0}
+                            }}
+                            className={`self-end text-right rtl:text-left`}
+                        >
+                            <p className={` text-[#FFFFFFCC] text-[20px] font-[300] max-w-[436px] break-words font-poppins my-[146px]`}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is
+                                simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </ClientSectionMotion>
+
+                        <ClientSectionMotion
+                            initial="hidden"
+                            whileInView="visible"
+                            // viewport={{once: true}}
+                            transition={{duration: 1, ease: 'easeInOut', delay: .3}}
+                            variants={{
+                                visible: {opacity: 1},
+                                hidden: {opacity: 0}
                             }}
                         >
                             <div className={`flex items-center justify-between`}>
@@ -123,8 +159,8 @@ export default function AdvertisePage() {
                             // viewport={{once: true}}
                             transition={{duration: 1, ease: 'easeInOut', delay: .3}}
                             variants={{
-                                visible: {opacity: 1, scaleY: 1},
-                                hidden: {opacity: 0, scaleY: 0}
+                                visible: {opacity: 1},
+                                hidden: {opacity: 0}
                             }}
                         >
                             <div className={`flex items-center justify-between mt-[128px]`}>

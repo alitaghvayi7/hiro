@@ -3,8 +3,9 @@ import ImageOne from "@/assets/images/introduction/image1-lg.png";
 import dynamic from "next/dynamic";
 import "./firstSection.css";
 import {buttonVariants} from "@/components/ui/button";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import {cn} from "@/lib/utils/cn";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 const ClientMotionComponent = dynamic(() => import("@/devices/mobile/components/HomePage/ClientMotionComponent"), {ssr: false});
 
@@ -15,6 +16,7 @@ interface Props {
 const FirstSection = (props: Props) => {
 
     const {step} = props;
+    const translate = useTranslate('home.first');
 
     return (
         <>
@@ -27,18 +29,19 @@ const FirstSection = (props: Props) => {
                      <span
                          className={`font-poppins font-thin text-[90px] text-[#FFFFFF33] pt-4`}>01</span>
                     <h1 className={`font-taviraj font-normal text-[50px] text-white max-w-[267px] leading-[3.5rem] drop-shadow-[0_4px_4px_#00000040]`}>
-                        Advertise
-                        <p className={`font-taviraj font-medium italic text-[#ffe9a6]`}>Creatively</p>
-                        & beyond
+                        {/*Advertise*/}
+                        {/*<p className={`font-taviraj font-medium italic text-[#ffe9a6]`}>Creatively</p>*/}
+                        {/*& beyond*/}
+                        {translate('title')}
                     </h1>
                     <p className={`text-[#ffe9a6] text-[16px] leading-6 max-w-[316px] mt-6 drop-shadow-[0_4px_4px_#00000040] font-poppins font-light `}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        {translate('description')}
                     </p>
                     <Link
                         href={'/advertise'}
                         className={cn(buttonVariants({variant: "outline"}), 'w-[126px] h-10 mt-4 text-white rounded-[8px] font-poppins')}
                     >
-                        More...
+                        {translate('linkcontent')}
                     </Link>
                 </div>
 

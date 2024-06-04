@@ -1,7 +1,7 @@
 import { HomeIcon } from "@heroicons/react/24/solid"
 import MapImage from "@/assets/images/introduction/mp-image.png"
 import Image from "next/image"
-import Link from "next/link"
+import {Link} from "@/navigation"
 
 
 function AboutusPage() {
