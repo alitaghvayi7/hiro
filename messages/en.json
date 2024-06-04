@@ -79,5 +79,27 @@
       "title": "About Us",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     }
+  },
+  "contact": {
+    "first": {
+      "title": "Office 1",
+      "value": "021-4789561"
+    },
+    "second": {
+      "title": "Office 2",
+      "value": "025-9874561"
+    },
+    "third": {
+      "title": "Phone",
+      "value": "09100587498"
+    },
+    "fourth": {
+      "title": "Email",
+      "value": "example@gmail.com"
+    } ,
+    "fifth": {
+      "title": "Instagram",
+      "value": "@Iraneziba"
+    }
   }
 }

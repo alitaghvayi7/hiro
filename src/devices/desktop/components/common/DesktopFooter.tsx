@@ -21,13 +21,13 @@ const DesktopFooter = () => {
             <div className={`flex flex-col justify-between items-center h-full gap-2`}>
                 <h5 className={`font-poppins font-[500] text-yellow-100 text-[14px] text-center`}>{translate('links.title')}</h5>
                 <Link
-                    href={''}
+                    href={'/'}
                     className={`font-poppins font-[300] text-[#FFFFFFCC] text-[12px] leading-4 block`}
                 >
                     {translate('links.home')}
                 </Link>
                 <Link
-                    href={''}
+                    href={'/services'}
                     className={`font-poppins font-[300] text-[#FFFFFFCC] text-[12px] leading-4 block`}
                 >
                     {translate('links.services')}

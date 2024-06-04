@@ -79,5 +79,27 @@
       "title": "درباره ما",
       "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
     }
+  },
+  "contact": {
+    "first": {
+      "title": "دفتر 1",
+      "value": "021-4789561"
+    },
+    "second": {
+      "title": "دفتر 2",
+      "value": "025-9874561"
+    },
+    "third": {
+      "title": "موبایل",
+      "value": "09100587498"
+    },
+    "fourth": {
+      "title": "ایمیل",
+      "value": "example@gmail.com"
+    } ,
+    "fifth": {
+      "title": "اینستاگرام",
+      "value": "@Iraneziba"
+    }
   }
 }
