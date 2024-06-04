@@ -1,13 +1,13 @@
-import type {Metadata, Viewport} from "next";
-import {Poppins, Taviraj, Roboto} from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Poppins, Taviraj, Roboto } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import dynamic from "next/dynamic";
 // import TransitionProvider from "@/components/providers/TransitionProvider";
-const TransitionProvider = dynamic(() => import('@/components/providers/TransitionProvider'), {ssr: false})
-import {cn} from "@/lib/utils/cn";
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+const TransitionProvider = dynamic(() => import('@/components/providers/TransitionProvider'), { ssr: false })
+import { cn } from "@/lib/utils/cn";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import localFont from 'next/font/local'
 
 const iransans = localFont({
@@ -58,9 +58,7 @@ const iransans = localFont({
             style: "normal",
         }
     ],
-    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     preload: true,
-    style: ['normal'],
     variable: '--font-iransans'
 });
 
@@ -137,7 +135,7 @@ export const viewport: Viewport = {
 async function RootLayout(
     {
         children,
-        params: {locale}
+        params: { locale }
     }: {
         children: React.ReactNode;
         params: { locale: string };
@@ -157,19 +155,19 @@ async function RootLayout(
 
     return (
         <html lang={`${locale}`} dir={['fa', 'ar'].includes(locale) ? 'rtl' : 'ltr'}>
-        <body
-            className={cn("bg-gradient-to-b from-[#024343] to-[#001212]", font)}>
-        <NextIntlClientProvider messages={messages}>
-            <NextTopLoader
-                color={"#FFE9A6"}
-                showSpinner={false}
-                height={1}
-            />
-            <TransitionProvider>
-                {children}
-            </TransitionProvider>
-        </NextIntlClientProvider>
-        </body>
+            <body
+                className={cn("bg-gradient-to-b from-[#024343] to-[#001212]", font)}>
+                <NextIntlClientProvider messages={messages}>
+                    <NextTopLoader
+                        color={"#FFE9A6"}
+                        showSpinner={false}
+                        height={1}
+                    />
+                    <TransitionProvider>
+                        {children}
+                    </TransitionProvider>
+                </NextIntlClientProvider>
+            </body>
         </html>
     );
 }
