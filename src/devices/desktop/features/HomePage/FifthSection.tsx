@@ -1,23 +1,26 @@
-
 import Image from "next/image";
 import ImageFive from "@/assets/images/introduction/image5-lg.png"
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./fifthSection.css"
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 interface Props {
     step: number,
 }
 
 const FifthSection = (props: Props) => {
-    const { step } = props;
+    const {step} = props;
+    const translate = useTranslate('home.fifth')
+
     return (
         <ClientMotionComponent
             step={step}
             value={5}
             className={`w-full !h-[calc(100vh-92px)] relative isolate overflow-hidden bg-transparent flex items-center justify-around pe-[72px]`}>
             <div className={`w-full h-[80%] max-w-[711px] max-h-[702px] relative isolate flex justify-between pt-4`}>
-                <div className={`relative isolate !max-w-[569px] !max-h-[514px] w-full h-full flex items-center justify-center translate-animation-chain`}>
+                <div
+                    className={`relative isolate !max-w-[569px] !max-h-[514px] w-full h-full flex items-center justify-center translate-animation-chain`}>
 
                     <Image
                         src={ImageFive}
@@ -36,19 +39,19 @@ const FifthSection = (props: Props) => {
             <div className={`relative self-end flex flex-col h-full`}>
                 <span className={`font-poppins font-thin text-[90px] text-[#FFFFFF33] relative my-4 text-end`}>05</span>
                 <h1 className={`font-taviraj font-normal text-[50px] text-white leading-[3rem] max-w-[407px] text-end`}>
-                    Become more
-                    <br />
-                    <span className={`font-taviraj-italic text-[#ffe9a6]`}>Coherent </span>
-                    and
-                    <span className={`font-taviraj italic text-[#ffe9a6]`}> Structured</span>
+                    {translate('title-p-1')}
+                    <br/>
+                    <span className={`font-taviraj-italic text-[#ffe9a6]`}>{translate('subtitle-1')}</span>
+                    {translate('title-p-2')}
+                    <span className={`font-taviraj italic text-[#ffe9a6]`}>{translate('subtitle-2')}</span>
                 </h1>
                 <p className={`font-poppins text-[#ffe9a6] text-[16px] leading-6 text-end max-w-[412px] mt-4`}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    {translate('description')}
                 </p>
                 <Button
                     variant={'outline'}
                     className={`w-[126px] h-10 mt-4 text-white rounded-[8px] font-poppins self-end`}>
-                    More...
+                    {translate('linkcontent')}
                 </Button>
             </div>
         </ClientMotionComponent>

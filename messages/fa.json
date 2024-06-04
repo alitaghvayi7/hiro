@@ -8,51 +8,51 @@
   },
   "home": {
     "first": {
-      "title": "تبلیغی خلاقانه تر و فراتر",
+      "title-p-1": "تبلیغی ",
+      "title-p-2": " و فراتر",
       "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ",
       "linkcontent": "بیشتر...",
-      "subtitleone": "خلاقانه تر"
+      "subtitle-1": "خلاقانه تر"
     },
     "second": {
-      "title": "Advertise creative & beyond",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "subtitleone": "creative"
+      "title-p-1": "چه کاری انجام دهید ",
+      "subtitle-1": "مردم",
+      "title-p-2": " در مورد شما می گویند؟ ",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ",
+      "linkcontent": "بیشتر..."
     },
-    "kitchen": {
-      "title": "Kitchen",
-      "description": "A modern kitchen equipped with stainless steel appliances, granite countertops, and ample storage space."
+    "third": {
+      "title-p-1": "تبدیل شوید به ",
+      "subtitle-1": "پادشاه",
+      "title-p-2": " بازار خودتان ",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ",
+      "linkcontent": "بیشتر..."
     },
-    "masterBedroom": {
-      "title": "Master Bedroom",
-      "description": "A large master bedroom with an en-suite bathroom and a walk-in closet."
+    "fourth": {
+      "title-p-1": "تکامل پیدا میکند ",
+      "subtitle-1": "فروشتان",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ",
+      "linkcontent": "بیشتر..."
     },
-    "guestBedroom": {
-      "title": "Guest Bedroom",
-      "description": "A cozy guest bedroom with a queen-sized bed and a dresser."
+    "fifth": {
+      "title-p-1": "بیشتر ",
+      "subtitle-1": "منسجم ",
+      "title-p-2": "شوید و ",
+      "subtitle-2": "ساختارمند",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ",
+      "linkcontent": "بیشتر..."
     },
-    "bathroom": {
-      "title": "Bathroom",
-      "description": "A clean and well-maintained bathroom with a bathtub and shower."
+    "sixth": {
+      "title-p-1": "",
+      "subtitle-1": "عقب نمانید",
+      "title-p-2":"در زمینه صنعت استارتاپ خود",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است ",
+      "linkcontent": "بیشتر..."
     },
-    "diningRoom": {
-      "title": "Dining Room",
-      "description": "An elegant dining room with a large table that can seat up to eight people."
-    },
-    "office": {
-      "title": "Office",
-      "description": "A quiet office space with a desk, chair, and bookshelf, perfect for working from home."
-    },
-    "basement": {
-      "title": "Basement",
-      "description": "A finished basement with a home theater and additional storage space."
-    },
-    "backyard": {
-      "title": "Backyard",
-      "description": "A large backyard with a patio, garden, and plenty of space for outdoor activities."
-    },
-    "garage": {
-      "title": "Garage",
-      "description": "A two-car garage with extra room for tools and equipment."
+    "final": {
+      "title": "تبریک میگم!",
+      "description": "از این پس اتاق فکری پویا و خلاق خواهید داشت...",
+      "linkcontent": "بیشتر..."
     }
   }
 }

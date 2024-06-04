@@ -3,6 +3,7 @@ import ImageTwo from "@/assets/images/introduction/image2-lg.png"
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./secondSection.css"
 import {Button} from "@/components/ui/button";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 interface Props {
     step: number,
@@ -11,6 +12,7 @@ interface Props {
 const SecondSection = (props: Props) => {
 
     const {step} = props;
+    const translate = useTranslate('home.second');
 
     return (
         <>
@@ -22,21 +24,23 @@ const SecondSection = (props: Props) => {
                                     <span
                                         className={`font-poppins font-thin text-[90px] text-[#FFFFFF33]`}>02</span>
                     <h1 className={`font-taviraj font-normal text-[50px] text-white max-w-[267px] leading-[3rem]`}>
-                        What do
+                        {translate('title-p-1')}
                         <br/>
-                        <span className={`font-taviraj font-medium italic text-[#ffe9a6]`}>People </span>
-                        say about you?
+                        <span
+                            className={`font-taviraj font-medium italic text-[#ffe9a6]`}>{translate('subtitle-1')}</span>
+                        {translate('title-p-2')}
                     </h1>
                     <p className={`font-poppins text-[#ffe9a6] text-[16px] leading-6 w-full mt-4 max-w-[316px]`}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        {translate('description')}
                     </p>
                     <Button
                         variant={'outline'}
                         className={`w-[126px] h-10 mt-4 font-poppins font-light rounded-[8px]`}>
-                        More...
+                        {translate('linkcontent')}
                     </Button>
                 </div>
-                <div className={`relative isolate w-full h-[80%] ms-[10rem] max-w-[711px] max-h-[502px] translate-animation flex items-center justify-center`}>
+                <div
+                    className={`relative isolate w-full h-[80%] ms-[10rem] max-w-[711px] max-h-[502px] translate-animation flex items-center justify-center`}>
                     <Image
                         src={ImageTwo}
                         alt=""

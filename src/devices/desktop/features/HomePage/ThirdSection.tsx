@@ -3,6 +3,7 @@ import ImageThree from "@/assets/images/introduction/image3-lg.png";
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import './thirdSection.css';
 import {Button} from "@/components/ui/button";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 interface Props {
     step: number,
@@ -10,6 +11,7 @@ interface Props {
 
 const ThirdSection = (props: Props) => {
     const {step} = props;
+    const translate = useTranslate('home.third');
 
     return (
         <>
@@ -39,19 +41,19 @@ const ThirdSection = (props: Props) => {
                 <div dir="rtl" className={``}>
                     <span className={`font-poppins font-thin text-[90px] text-[#FFFFFF33] self-end relative top-0 py-4`}>03</span>
                     <h1 className={`font-taviraj font-normal text-[50px] text-white max-w-[305px] leading-[3rem]`}>
-                        Become the
+                        {translate('title-p-1')}
                         <br/>
-                        <span className={`font-taviraj text-[#ffe9a6]`}>King </span>
-                        of your market
+                        <span className={`font-taviraj text-[#ffe9a6]`}>{translate('subtitle-1')}</span>
+                        {translate('title-p-2')}
                     </h1>
                     <p className={`font-poppins text-[#ffe9a6] text-[16px] leading-6 w-full max-w-[483px] mt-4`}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        {translate('description')}
                     </p>
                     <Button
                         dir={'ltr'}
                         variant={'outline'}
                         className={`w-[126px] h-10 mt-4 rounded-[8px] font-poppins`}>
-                        More...
+                        {translate('linkcontent')}
                     </Button>
                 </div>
 

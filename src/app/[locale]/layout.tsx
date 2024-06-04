@@ -3,12 +3,12 @@ import { Poppins, Taviraj, Roboto } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import dynamic from "next/dynamic";
-// import TransitionProvider from "@/components/providers/TransitionProvider";
 const TransitionProvider = dynamic(() => import('@/components/providers/TransitionProvider'), { ssr: false })
 import { cn } from "@/lib/utils/cn";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import localFont from 'next/font/local'
+import {locales} from "@/navigation";
 
 const iransans = localFont({
     src: [
@@ -98,39 +98,16 @@ export const metadata: Metadata = {
         template: APP_TITLE_TEMPLATE,
     },
     description: APP_DESCRIPTION,
-    manifest: "/manifest.json",
-    appleWebApp: {
-        capable: true,
-        statusBarStyle: "default",
-        title: APP_DEFAULT_TITLE,
-        // startUpImage: [],
-    },
-    formatDetection: {
-        telephone: false,
-    },
-    openGraph: {
-        type: "website",
-        siteName: APP_NAME,
-        title: {
-            default: APP_DEFAULT_TITLE,
-            template: APP_TITLE_TEMPLATE,
-        },
-        description: APP_DESCRIPTION,
-    },
-    twitter: {
-        card: "summary",
-        title: {
-            default: APP_DEFAULT_TITLE,
-            template: APP_TITLE_TEMPLATE,
-        },
-        description: APP_DESCRIPTION,
-    },
 };
 
 export const viewport: Viewport = {
     themeColor: "#FFFFFF",
 };
 
+
+export function generateStaticParams() {
+    return locales.map((locale) => ({locale}));
+}
 
 async function RootLayout(
     {
@@ -143,7 +120,6 @@ async function RootLayout(
 
     const messages = await getMessages();
 
-    console.log(messages)
 
     let font = null;
 

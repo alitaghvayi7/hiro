@@ -8,51 +8,51 @@
   },
   "home": {
     "first": {
-      "title": "Advertise creative & beyond",
+      "title-p-1": "Advertise ",
+      "title-p-2": " & beyond",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       "linkcontent": "More...",
-      "subtitleone": "creative"
+      "subtitle-1": "creative"
     },
     "second": {
-      "title": "Advertise creative & beyond",
+      "title-p-1": "What do ",
+      "subtitle-1": "People",
+      "title-p-2": " say about you?",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "subtitleone": "creative"
+      "linkcontent": "More..."
     },
-    "kitchen": {
-      "title": "Kitchen",
-      "description": "A modern kitchen equipped with stainless steel appliances, granite countertops, and ample storage space."
+    "third": {
+      "title-p-1": "Become the ",
+      "subtitle-1": "King",
+      "title-p-2": " of your market",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "linkcontent": "More..."
     },
-    "masterBedroom": {
-      "title": "Master Bedroom",
-      "description": "A large master bedroom with an en-suite bathroom and a walk-in closet."
+    "fourth": {
+      "title-p-1": "Evolve your ",
+      "subtitle-1": "Sales",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "linkcontent": "More..."
     },
-    "guestBedroom": {
-      "title": "Guest Bedroom",
-      "description": "A cozy guest bedroom with a queen-sized bed and a dresser."
+    "fifth": {
+      "title-p-1": "Become more ",
+      "subtitle-1": "Coherent ",
+      "title-p-2": " and ",
+      "subtitle-2": "Structured ",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "linkcontent": "More..."
     },
-    "bathroom": {
-      "title": "Bathroom",
-      "description": "A clean and well-maintained bathroom with a bathtub and shower."
+    "sixth": {
+      "title-p-1": "Don't be ",
+      "subtitle-1": "Left behind ",
+      "title-p-2": "in the Startup field of your industry",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "linkcontent": "More..."
     },
-    "diningRoom": {
-      "title": "Dining Room",
-      "description": "An elegant dining room with a large table that can seat up to eight people."
-    },
-    "office": {
-      "title": "Office",
-      "description": "A quiet office space with a desk, chair, and bookshelf, perfect for working from home."
-    },
-    "basement": {
-      "title": "Basement",
-      "description": "A finished basement with a home theater and additional storage space."
-    },
-    "backyard": {
-      "title": "Backyard",
-      "description": "A large backyard with a patio, garden, and plenty of space for outdoor activities."
-    },
-    "garage": {
-      "title": "Garage",
-      "description": "A two-car garage with extra room for tools and equipment."
+    "final": {
+      "title": "Congratulation!",
+      "description": "From now on, you will have a dynamic and creative thinking room...",
+      "linkcontent": "More..."
     }
   }
 }

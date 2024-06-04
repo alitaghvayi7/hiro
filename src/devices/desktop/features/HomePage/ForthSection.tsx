@@ -4,13 +4,16 @@ import ImageFour from "@/assets/images/introduction/image4-lg.png";
 import ClientMotionComponent from "@/devices/mobile/components/HomePage/ClientMotionComponent";
 import "./forthSection.css";
 import {Button} from "@/components/ui/button";
+import {useTranslate} from "@/lib/hooks/useTranslate";
 
 interface Props {
     step : number,
 }
 
 const ForthSection = (props:Props) =>{
+
     const {step} = props;
+    const translate = useTranslate('home.fourth');
 
     return(
         <>
@@ -23,18 +26,17 @@ const ForthSection = (props:Props) =>{
                 <div className={`w-full relative`}>
                     <span className={`font-poppins font-thin text-[90px] text-[#FFFFFF33] relative py-4`}>04</span>
                     <h1 className={`font-taviraj font-normal text-[50px] text-white leading-[3rem]`}>
-                        Evolve
+                        {translate('title-p-1')}
                         <br/>
-                        your
-                        <span className={`font-taviraj italic text-yellow-100`}> Sales</span>
+                        <span className={`font-taviraj italic text-yellow-100`}>{translate('subtitle-1')}</span>
                     </h1>
                     <p className={`font-poppins text-yellow-100 text-[16px] leading-6 w-full max-w-[455px] mt-4`}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        {translate('description')}
                     </p>
                     <Button
                         variant={'outline'}
                         className={`w-[126px] h-10 mt-4 rounded-[8px] font-poppins`}>
-                        More...
+                        {translate('linkcontent')}
                     </Button>
                 </div>
 

@@ -32,7 +32,9 @@ const FirstSection = (props: Props) => {
                         {/*Advertise*/}
                         {/*<p className={`font-taviraj font-medium italic text-[#ffe9a6]`}>Creatively</p>*/}
                         {/*& beyond*/}
-                        {translate('title')}
+                        {translate('title-p-1')}
+                        <p className={`font-taviraj font-medium italic text-[#ffe9a6]`}>{translate('subtitle-1')}</p>
+                        {translate('title-p-2')}
                     </h1>
                     <p className={`text-[#ffe9a6] text-[16px] leading-6 max-w-[316px] mt-6 drop-shadow-[0_4px_4px_#00000040] font-poppins font-light `}>
                         {translate('description')}
